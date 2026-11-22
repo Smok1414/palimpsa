@@ -1,0 +1,51 @@
+{
+ "benchmark": "Rowan/hellaswag/validation",
+ "dataset_url": "https://huggingface.co/datasets/Rowan/hellaswag/resolve/main/data/validation-00000-of-00001.parquet",
+ "task_config": "https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/hellaswag/hellaswag.yaml",
+ "parquet_sha256": "899813071e1e95efafec90f856e1987d2150fa4d020fc005df6962c259f660cd",
+ "examples": 10042,
+ "choices": 40168,
+ "choices_per_example": 4,
+ "uniform_choice_baseline": 0.25,
+ "fewshot": 0,
+ "device": "NVIDIA GeForce RTX 2050",
+ "dtype": "float32",
+ "prompt": "Preprocessed activity_label + ': ' + ctx_a + ' ' + ctx_b.capitalize()",
+ "document_prefix": "Palimpsa EOS token",
+ "answer_delimiter": " ",
+ "scoring": "Log-likelihood of each preprocessed ending; acc_norm divides its score by character count",
+ "tokenization_boundary_changes": 0,
+ "training_data_overlap_checked": false,
+ "results": {
+  "symA": {
+   "checkpoint": "runs/local_10m/S_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21745056,
+   "acc": 0.26757618004381595,
+   "acc_correct": 2687,
+   "acc_norm": 0.2746464847639912,
+   "acc_norm_correct": 2758,
+   "elapsed_seconds": 108.21
+  },
+  "base": {
+   "checkpoint": "runs/local_10m/B_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21730944,
+   "acc": 0.2671778530173272,
+   "acc_correct": 2683,
+   "acc_norm": 0.27076279625572597,
+   "acc_norm_correct": 2719,
+   "elapsed_seconds": 92.74
+  }
+ },
+ "paired": {
+  "acc": {
+   "symA_only_correct": 225,
+   "base_only_correct": 221
+  },
+  "acc_norm": {
+   "symA_only_correct": 396,
+   "base_only_correct": 357
+  }
+ }
+}

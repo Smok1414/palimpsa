@@ -1,0 +1,509 @@
+device cuda | torch 2.11.0+cu128
+  mqar1  base  step   100  loss 4.7236  acc 0.017     8.1s
+  mqar1  base  step   200  loss 4.5030  acc 0.039    16.7s
+  mqar1  base  step   300  loss 4.3120  acc 0.052    25.1s
+  mqar1  base  step   400  loss 4.2469  acc 0.059    33.3s
+  mqar1  base  step   500  loss 4.1934  acc 0.057    41.3s
+  mqar1  base  step   600  loss 4.1469  acc 0.058    49.0s
+  mqar1  base  step   700  loss 4.1101  acc 0.060    56.8s
+  mqar1  base  step   800  loss 4.0893  acc 0.060    64.2s
+  mqar1  base  step   900  loss 4.0239  acc 0.058    71.5s
+  mqar1  base  step  1000  loss 3.9508  acc 0.060    78.9s
+  mqar1  base  step  1100  loss 4.0015  acc 0.060    86.5s
+  mqar1  base  step  1200  loss 3.9440  acc 0.057    94.9s
+  mqar1  base  step  1300  loss 3.9290  acc 0.057   103.2s
+  mqar1  base  step  1400  loss 3.9398  acc 0.062   111.5s
+  mqar1  base  step  1500  loss 3.8890  acc 0.059   119.8s
+  mqar1  base  step  1600  loss 3.9238  acc 0.061   128.1s
+  mqar1  base  step  1700  loss 3.8599  acc 0.058   136.6s
+  mqar1  base  step  1800  loss 3.8363  acc 0.057   145.1s
+  mqar1  base  step  1900  loss 3.8753  acc 0.059   154.2s
+  mqar1  base  step  2000  loss 3.8340  acc 0.059   163.5s
+  mqar1  base  step  2100  loss 3.8563  acc 0.057   172.6s
+  mqar1  base  step  2200  loss 3.8112  acc 0.058   181.6s
+  mqar1  base  step  2300  loss 3.8176  acc 0.056   190.4s
+  mqar1  base  step  2400  loss 3.8530  acc 0.054   199.4s
+  mqar1  base  step  2500  loss 3.8295  acc 0.059   208.3s
+  mqar1  base  step  2600  loss 3.7564  acc 0.057   217.0s
+  mqar1  base  step  2700  loss 3.7413  acc 0.059   225.6s
+  mqar1  base  step  2800  loss 3.7255  acc 0.059   234.2s
+  mqar1  base  step  2900  loss 3.7210  acc 0.061   242.9s
+  mqar1  base  step  3000  loss 3.6825  acc 0.062   251.5s
+  mqar1  symA  step   100  loss 4.7444  acc 0.013     9.0s
+  mqar1  symA  step   200  loss 4.6253  acc 0.031    17.6s
+  mqar1  symA  step   300  loss 4.4766  acc 0.052    26.2s
+  mqar1  symA  step   400  loss 3.9266  acc 0.130    35.0s
+  mqar1  symA  step   500  loss 0.6993  acc 0.879    43.9s
+  mqar1  symA  step   600  loss 0.0306  acc 0.999    52.8s
+  mqar1  symA  step   700  loss 0.0259  acc 0.999    61.6s
+  mqar1  symA  step   800  loss 0.0177  acc 0.997    70.5s
+  mqar1  symA  step   900  loss 0.0186  acc 0.999    79.5s
+  mqar1  symA  step  1000  loss 0.0078  acc 0.999    88.5s
+  mqar1  symA  step  1100  loss 0.0037  acc 1.000    97.3s
+  mqar1  symA  step  1200  loss 0.0015  acc 0.999   106.2s
+  mqar1  symA  step  1300  loss 0.0012  acc 1.000   115.7s
+  mqar1  symA  step  1400  loss 0.0012  acc 1.000   125.6s
+  mqar1  symA  step  1500  loss 0.0006  acc 0.999   135.6s
+  mqar1  symA  step  1600  loss 0.0004  acc 1.000   145.7s
+  mqar1  symA  step  1700  loss 0.0009  acc 1.000   155.5s
+  mqar1  symA  step  1800  loss 0.0003  acc 1.000   165.2s
+  mqar1  symA  step  1900  loss 0.0002  acc 1.000   174.9s
+  mqar1  symA  step  2000  loss 0.0003  acc 1.000   184.6s
+  mqar1  symA  step  2100  loss 0.0003  acc 1.000   194.3s
+  mqar1  symA  step  2200  loss 0.0002  acc 1.000   204.1s
+  mqar1  symA  step  2300  loss 0.0000  acc 1.000   214.2s
+  mqar1  symA  step  2400  loss 0.0004  acc 0.999   224.0s
+  mqar1  symA  step  2500  loss 0.0001  acc 1.000   233.7s
+  mqar1  symA  step  2600  loss 0.0002  acc 1.000   243.8s
+  mqar1  symA  step  2700  loss 0.0000  acc 1.000   253.7s
+  mqar1  symA  step  2800  loss 0.0000  acc 1.000   263.4s
+  mqar1  symA  step  2900  loss 0.0000  acc 1.000   273.4s
+  mqar1  symA  step  3000  loss 0.0000  acc 1.000   283.3s
+  mqar1  fox   step   100  loss 4.7487  acc 0.009     8.5s
+  mqar1  fox   step   200  loss 4.6762  acc 0.033    17.0s
+  mqar1  fox   step   300  loss 4.6522  acc 0.033    25.7s
+  mqar1  fox   step   400  loss 4.6141  acc 0.034    34.2s
+  mqar1  fox   step   500  loss 4.5605  acc 0.036    42.8s
+  mqar1  fox   step   600  loss 4.5279  acc 0.035    51.3s
+  mqar1  fox   step   700  loss 4.4638  acc 0.036    59.9s
+  mqar1  fox   step   800  loss 4.4624  acc 0.036    68.6s
+  mqar1  fox   step   900  loss 4.4022  acc 0.033    77.5s
+  mqar1  fox   step  1000  loss 4.3966  acc 0.033    86.0s
+  mqar1  fox   step  1100  loss 4.3809  acc 0.038    94.6s
+  mqar1  fox   step  1200  loss 4.3495  acc 0.036   103.1s
+  mqar1  fox   step  1300  loss 4.3170  acc 0.037   111.7s
+  mqar1  fox   step  1400  loss 4.3728  acc 0.039   120.3s
+  mqar1  fox   step  1500  loss 4.3121  acc 0.040   129.2s
+  mqar1  fox   step  1600  loss 4.3094  acc 0.038   137.8s
+  mqar1  fox   step  1700  loss 4.3153  acc 0.039   146.7s
+  mqar1  fox   step  1800  loss 4.3001  acc 0.041   155.2s
+  mqar1  fox   step  1900  loss 4.3010  acc 0.041   163.7s
+  mqar1  fox   step  2000  loss 4.2835  acc 0.045   172.3s
+  mqar1  fox   step  2100  loss 4.2637  acc 0.043   180.9s
+  mqar1  fox   step  2200  loss 4.2875  acc 0.042   189.6s
+  mqar1  fox   step  2300  loss 4.2687  acc 0.041   198.2s
+  mqar1  fox   step  2400  loss 4.2759  acc 0.041   206.8s
+  mqar1  fox   step  2500  loss 4.2409  acc 0.045   215.4s
+  mqar1  fox   step  2600  loss 4.2263  acc 0.044   223.9s
+  mqar1  fox   step  2700  loss 4.1865  acc 0.045   232.4s
+  mqar1  fox   step  2800  loss 4.1681  acc 0.046   241.1s
+  mqar1  fox   step  2900  loss 4.1682  acc 0.046   249.7s
+  mqar1  fox   step  3000  loss 4.1806  acc 0.046   258.4s
+  mqar3  base  step   100  loss 4.7174  acc 0.025    16.2s
+  mqar3  base  step   200  loss 4.5500  acc 0.034    31.8s
+  mqar3  base  step   300  loss 4.4299  acc 0.044    47.6s
+  mqar3  base  step   400  loss 4.2992  acc 0.050    63.1s
+  mqar3  base  step   500  loss 4.2630  acc 0.050    78.4s
+  mqar3  base  step   600  loss 4.2025  acc 0.050    94.0s
+  mqar3  base  step   700  loss 4.1845  acc 0.052   109.3s
+  mqar3  base  step   800  loss 4.1701  acc 0.052   124.7s
+  mqar3  base  step   900  loss 4.0816  acc 0.053   140.0s
+  mqar3  base  step  1000  loss 4.0626  acc 0.055   155.3s
+  mqar3  base  step  1100  loss 4.1144  acc 0.057   170.5s
+  mqar3  base  step  1200  loss 4.0238  acc 0.056   186.1s
+  mqar3  base  step  1300  loss 4.0269  acc 0.057   201.4s
+  mqar3  base  step  1400  loss 4.0618  acc 0.057   216.9s
+  mqar3  base  step  1500  loss 4.0516  acc 0.054   232.1s
+  mqar3  base  step  1600  loss 3.9950  acc 0.059   247.4s
+  mqar3  base  step  1700  loss 3.9805  acc 0.061   262.7s
+  mqar3  base  step  1800  loss 3.9534  acc 0.062   278.2s
+  mqar3  base  step  1900  loss 3.9848  acc 0.060   293.8s
+  mqar3  base  step  2000  loss 3.9499  acc 0.062   309.1s
+  mqar3  base  step  2100  loss 3.9578  acc 0.068   324.7s
+  mqar3  base  step  2200  loss 3.8825  acc 0.063   340.0s
+  mqar3  base  step  2300  loss 3.8631  acc 0.062   355.6s
+  mqar3  base  step  2400  loss 3.9697  acc 0.064   371.0s
+  mqar3  base  step  2500  loss 3.8684  acc 0.063   386.3s
+  mqar3  base  step  2600  loss 3.8113  acc 0.069   402.1s
+  mqar3  base  step  2700  loss 3.8124  acc 0.067   417.4s
+  mqar3  base  step  2800  loss 3.7936  acc 0.067   432.7s
+  mqar3  base  step  2900  loss 3.7787  acc 0.069   448.1s
+  mqar3  base  step  3000  loss 3.7455  acc 0.068   463.4s
+  mqar3  symA  step   100  loss 4.7264  acc 0.022    19.7s
+  mqar3  symA  step   200  loss 4.6593  acc 0.031    39.4s
+  mqar3  symA  step   300  loss 4.6222  acc 0.042    59.2s
+  mqar3  symA  step   400  loss 3.5870  acc 0.204    78.9s
+  mqar3  symA  step   500  loss 0.0502  acc 1.000    98.8s
+  mqar3  symA  step   600  loss 0.0210  acc 0.999   118.6s
+  mqar3  symA  step   700  loss 0.0096  acc 1.000   138.8s
+  mqar3  symA  step   800  loss 0.0008  acc 1.000   158.5s
+  mqar3  symA  step   900  loss 0.0000  acc 1.000   178.2s
+  mqar3  symA  step  1000  loss 0.0017  acc 1.000   198.1s
+  mqar3  symA  step  1100  loss 0.0001  acc 1.000   218.1s
+  mqar3  symA  step  1200  loss 0.0000  acc 1.000   237.8s
+  mqar3  symA  step  1300  loss 0.0039  acc 1.000   257.7s
+  mqar3  symA  step  1400  loss 0.0002  acc 1.000   277.5s
+  mqar3  symA  step  1500  loss 0.0000  acc 1.000   297.5s
+  mqar3  symA  step  1600  loss 0.0000  acc 1.000   317.4s
+  mqar3  symA  step  1700  loss 0.0001  acc 1.000   337.6s
+  mqar3  symA  step  1800  loss 0.0004  acc 1.000   357.9s
+  mqar3  symA  step  1900  loss 0.0004  acc 1.000   377.8s
+  mqar3  symA  step  2000  loss 0.0000  acc 1.000   398.1s
+  mqar3  symA  step  2100  loss 0.0000  acc 1.000   417.8s
+  mqar3  symA  step  2200  loss 0.0001  acc 1.000   437.9s
+  mqar3  symA  step  2300  loss 0.0000  acc 1.000   457.9s
+  mqar3  symA  step  2400  loss 0.0001  acc 1.000   477.8s
+  mqar3  symA  step  2500  loss 0.0000  acc 1.000   497.5s
+  mqar3  symA  step  2600  loss 0.0000  acc 1.000   517.2s
+  mqar3  symA  step  2700  loss 0.0000  acc 1.000   537.0s
+  mqar3  symA  step  2800  loss 0.0000  acc 1.000   557.1s
+  mqar3  symA  step  2900  loss 0.0000  acc 1.000   576.8s
+  mqar3  symA  step  3000  loss 0.0000  acc 1.000   596.7s
+  mqar3  fox   step   100  loss 4.7229  acc 0.026    15.7s
+  mqar3  fox   step   200  loss 4.6566  acc 0.032    31.3s
+  mqar3  fox   step   300  loss 4.6415  acc 0.034    46.9s
+  mqar3  fox   step   400  loss 4.6084  acc 0.032    62.9s
+  mqar3  fox   step   500  loss 4.6018  acc 0.032    78.5s
+  mqar3  fox   step   600  loss 4.5340  acc 0.037    94.1s
+  mqar3  fox   step   700  loss 4.5032  acc 0.036   109.7s
+  mqar3  fox   step   800  loss 4.4814  acc 0.039   125.4s
+  mqar3  fox   step   900  loss 4.4274  acc 0.036   141.0s
+  mqar3  fox   step  1000  loss 4.3872  acc 0.043   156.8s
+  mqar3  fox   step  1100  loss 4.3515  acc 0.039   172.7s
+  mqar3  fox   step  1200  loss 4.3464  acc 0.044   188.3s
+  mqar3  fox   step  1300  loss 4.3622  acc 0.039   204.3s
+  mqar3  fox   step  1400  loss 4.3414  acc 0.041   220.1s
+  mqar3  fox   step  1500  loss 4.3269  acc 0.039   235.7s
+  mqar3  fox   step  1600  loss 4.3649  acc 0.040   251.3s
+  mqar3  fox   step  1700  loss 4.3289  acc 0.045   267.0s
+  mqar3  fox   step  1800  loss 4.2655  acc 0.045   282.6s
+  mqar3  fox   step  1900  loss 4.2892  acc 0.044   298.9s
+  mqar3  fox   step  2000  loss 4.2377  acc 0.046   314.6s
+  mqar3  fox   step  2100  loss 4.2850  acc 0.047   330.6s
+  mqar3  fox   step  2200  loss 4.2539  acc 0.051   346.2s
+  mqar3  fox   step  2300  loss 4.2281  acc 0.048   361.8s
+  mqar3  fox   step  2400  loss 4.2170  acc 0.048   378.0s
+  mqar3  fox   step  2500  loss 4.1845  acc 0.050   393.6s
+  mqar3  fox   step  2600  loss 4.1567  acc 0.049   409.4s
+  mqar3  fox   step  2700  loss 4.1468  acc 0.049   425.2s
+  mqar3  fox   step  2800  loss 4.1537  acc 0.051   441.1s
+  mqar3  fox   step  2900  loss 4.1698  acc 0.050   457.0s
+  mqar3  fox   step  3000  loss 4.1012  acc 0.051   472.6s
+  fuzzy3 base  step   100  loss 4.7271  acc 0.016    15.8s
+  fuzzy3 base  step   200  loss 4.6519  acc 0.036    31.4s
+  fuzzy3 base  step   300  loss 4.5573  acc 0.038    46.8s
+  fuzzy3 base  step   400  loss 4.4574  acc 0.044    62.4s
+  fuzzy3 base  step   500  loss 4.4322  acc 0.045    78.3s
+  fuzzy3 base  step   600  loss 4.3272  acc 0.046    93.6s
+  fuzzy3 base  step   700  loss 4.2620  acc 0.051   109.2s
+  fuzzy3 base  step   800  loss 4.2242  acc 0.052   124.5s
+  fuzzy3 base  step   900  loss 4.1316  acc 0.053   139.8s
+  fuzzy3 base  step  1000  loss 4.0707  acc 0.055   155.1s
+  fuzzy3 base  step  1100  loss 4.0702  acc 0.055   170.4s
+  fuzzy3 base  step  1200  loss 4.0263  acc 0.055   186.0s
+  fuzzy3 base  step  1300  loss 3.9954  acc 0.055   201.6s
+  fuzzy3 base  step  1400  loss 3.9483  acc 0.056   216.9s
+  fuzzy3 base  step  1500  loss 3.9714  acc 0.054   232.3s
+  fuzzy3 base  step  1600  loss 3.9118  acc 0.058   248.1s
+  fuzzy3 base  step  1700  loss 3.9435  acc 0.057   263.5s
+  fuzzy3 base  step  1800  loss 3.8787  acc 0.054   278.8s
+  fuzzy3 base  step  1900  loss 3.8578  acc 0.057   294.2s
+  fuzzy3 base  step  2000  loss 3.8961  acc 0.054   309.9s
+  fuzzy3 base  step  2100  loss 3.8671  acc 0.056   325.2s
+  fuzzy3 base  step  2200  loss 3.9176  acc 0.057   340.5s
+  fuzzy3 base  step  2300  loss 3.8533  acc 0.057   356.0s
+  fuzzy3 base  step  2400  loss 3.8375  acc 0.053   371.8s
+  fuzzy3 base  step  2500  loss 3.8261  acc 0.058   387.4s
+  fuzzy3 base  step  2600  loss 3.8137  acc 0.062   403.1s
+  fuzzy3 base  step  2700  loss 3.8092  acc 0.062   418.4s
+  fuzzy3 base  step  2800  loss 3.7764  acc 0.061   434.2s
+  fuzzy3 base  step  2900  loss 3.7178  acc 0.062   449.6s
+  fuzzy3 base  step  3000  loss 3.7503  acc 0.058   464.9s
+  fuzzy3 symA  step   100  loss 4.7344  acc 0.009    19.8s
+  fuzzy3 symA  step   200  loss 4.7084  acc 0.024    39.6s
+  fuzzy3 symA  step   300  loss 4.6918  acc 0.029    59.7s
+  fuzzy3 symA  step   400  loss 4.6663  acc 0.033    79.4s
+  fuzzy3 symA  step   500  loss 4.6150  acc 0.040    99.1s
+  fuzzy3 symA  step   600  loss 4.5578  acc 0.050   118.8s
+  fuzzy3 symA  step   700  loss 4.3749  acc 0.074   138.7s
+  fuzzy3 symA  step   800  loss 4.2470  acc 0.086   158.3s
+  fuzzy3 symA  step   900  loss 4.1984  acc 0.097   178.0s
+  fuzzy3 symA  step  1000  loss 4.1292  acc 0.106   197.7s
+  fuzzy3 symA  step  1100  loss 4.0433  acc 0.107   217.4s
+  fuzzy3 symA  step  1200  loss 4.0757  acc 0.116   237.5s
+  fuzzy3 symA  step  1300  loss 4.0044  acc 0.132   257.5s
+  fuzzy3 symA  step  1400  loss 3.8416  acc 0.134   277.1s
+  fuzzy3 symA  step  1500  loss 3.8075  acc 0.134   296.8s
+  fuzzy3 symA  step  1600  loss 3.7336  acc 0.140   316.8s
+  fuzzy3 symA  step  1700  loss 3.7482  acc 0.149   336.9s
+  fuzzy3 symA  step  1800  loss 3.6249  acc 0.157   357.2s
+  fuzzy3 symA  step  1900  loss 3.6184  acc 0.169   376.9s
+  fuzzy3 symA  step  2000  loss 3.4780  acc 0.181   397.0s
+  fuzzy3 symA  step  2100  loss 3.3409  acc 0.191   416.7s
+  fuzzy3 symA  step  2200  loss 3.3653  acc 0.196   436.5s
+  fuzzy3 symA  step  2300  loss 3.3083  acc 0.200   456.2s
+  fuzzy3 symA  step  2400  loss 3.2373  acc 0.204   476.0s
+  fuzzy3 symA  step  2500  loss 3.2522  acc 0.211   496.1s
+  fuzzy3 symA  step  2600  loss 3.0537  acc 0.219   516.0s
+  fuzzy3 symA  step  2700  loss 2.9969  acc 0.228   536.1s
+  fuzzy3 symA  step  2800  loss 2.9227  acc 0.229   555.8s
+  fuzzy3 symA  step  2900  loss 2.9642  acc 0.237   575.5s
+  fuzzy3 symA  step  3000  loss 2.9164  acc 0.237   595.2s
+  fuzzy3 fox   step   100  loss 4.7348  acc 0.009    15.7s
+  fuzzy3 fox   step   200  loss 4.7170  acc 0.027    31.3s
+  fuzzy3 fox   step   300  loss 4.6767  acc 0.029    47.0s
+  fuzzy3 fox   step   400  loss 4.6634  acc 0.029    62.8s
+  fuzzy3 fox   step   500  loss 4.6414  acc 0.032    78.5s
+  fuzzy3 fox   step   600  loss 4.6118  acc 0.030    94.2s
+  fuzzy3 fox   step   700  loss 4.6031  acc 0.032   109.9s
+  fuzzy3 fox   step   800  loss 4.6063  acc 0.034   125.7s
+  fuzzy3 fox   step   900  loss 4.6267  acc 0.035   141.4s
+  fuzzy3 fox   step  1000  loss 4.6155  acc 0.034   157.0s
+  fuzzy3 fox   step  1100  loss 4.6048  acc 0.036   172.8s
+  fuzzy3 fox   step  1200  loss 4.6052  acc 0.033   188.8s
+  fuzzy3 fox   step  1300  loss 4.6074  acc 0.036   204.5s
+  fuzzy3 fox   step  1400  loss 4.5992  acc 0.037   220.1s
+  fuzzy3 fox   step  1500  loss 4.5734  acc 0.035   235.7s
+  fuzzy3 fox   step  1600  loss 4.6001  acc 0.035   251.4s
+  fuzzy3 fox   step  1700  loss 4.5773  acc 0.035   267.5s
+  fuzzy3 fox   step  1800  loss 4.5701  acc 0.035   283.2s
+  fuzzy3 fox   step  1900  loss 4.5816  acc 0.037   298.9s
+  fuzzy3 fox   step  2000  loss 4.5729  acc 0.035   314.6s
+  fuzzy3 fox   step  2100  loss 4.5708  acc 0.036   330.3s
+  fuzzy3 fox   step  2200  loss 4.5867  acc 0.038   346.1s
+  fuzzy3 fox   step  2300  loss 4.5645  acc 0.039   362.5s
+  fuzzy3 fox   step  2400  loss 4.5239  acc 0.038   378.6s
+  fuzzy3 fox   step  2500  loss 4.5514  acc 0.037   394.3s
+  fuzzy3 fox   step  2600  loss 4.5580  acc 0.038   410.0s
+  fuzzy3 fox   step  2700  loss 4.5614  acc 0.040   425.8s
+  fuzzy3 fox   step  2800  loss 4.5837  acc 0.038   441.6s
+  fuzzy3 fox   step  2900  loss 4.5524  acc 0.039   457.6s
+  fuzzy3 fox   step  3000  loss 4.5446  acc 0.038   474.0s
+  trap   base  step   100  loss 4.6315  acc 0.032     8.5s
+  trap   base  step   200  loss 4.3221  acc 0.049    17.0s
+  trap   base  step   300  loss 4.1826  acc 0.058    25.5s
+  trap   base  step   400  loss 4.0733  acc 0.058    34.0s
+  trap   base  step   500  loss 3.9295  acc 0.063    42.5s
+  trap   base  step   600  loss 3.8292  acc 0.068    51.0s
+  trap   base  step   700  loss 3.7419  acc 0.071    59.5s
+  trap   base  step   800  loss 3.6498  acc 0.073    68.0s
+  trap   base  step   900  loss 3.6391  acc 0.071    76.5s
+  trap   base  step  1000  loss 3.5429  acc 0.068    85.1s
+  trap   base  step  1100  loss 3.5302  acc 0.069    94.3s
+  trap   base  step  1200  loss 3.4747  acc 0.069   103.2s
+  trap   base  step  1300  loss 3.4220  acc 0.067   112.0s
+  trap   base  step  1400  loss 3.4245  acc 0.067   121.1s
+  trap   base  step  1500  loss 3.4101  acc 0.064   130.1s
+  trap   base  step  1600  loss 3.3854  acc 0.061   138.8s
+  trap   base  step  1700  loss 3.3590  acc 0.064   147.8s
+  trap   base  step  1800  loss 3.3910  acc 0.065   157.0s
+  trap   base  step  1900  loss 3.3901  acc 0.062   165.9s
+  trap   base  step  2000  loss 3.3744  acc 0.069   174.9s
+  trap   base  step  2100  loss 3.3275  acc 0.061   183.8s
+  trap   base  step  2200  loss 3.3601  acc 0.062   192.7s
+  trap   base  step  2300  loss 3.3285  acc 0.066   201.7s
+  trap   base  step  2400  loss 3.2986  acc 0.063   210.7s
+  trap   base  step  2500  loss 3.3218  acc 0.060   219.8s
+  trap   base  step  2600  loss 3.2453  acc 0.063   228.8s
+  trap   base  step  2700  loss 3.2030  acc 0.064   237.5s
+  trap   base  step  2800  loss 3.2119  acc 0.070   246.2s
+  trap   base  step  2900  loss 3.2069  acc 0.071   254.9s
+  trap   base  step  3000  loss 3.2024  acc 0.072   263.8s
+  trap   symA  step   100  loss 4.6886  acc 0.027     9.7s
+  trap   symA  step   200  loss 4.3881  acc 0.053    19.7s
+  trap   symA  step   300  loss 4.1119  acc 0.063    29.4s
+  trap   symA  step   400  loss 3.8276  acc 0.102    39.4s
+  trap   symA  step   500  loss 3.4648  acc 0.188    49.2s
+  trap   symA  step   600  loss 2.9888  acc 0.306    59.2s
+  trap   symA  step   700  loss 1.9034  acc 0.557    69.3s
+  trap   symA  step   800  loss 1.1047  acc 0.774    79.1s
+  trap   symA  step   900  loss 0.2941  acc 0.927    89.0s
+  trap   symA  step  1000  loss 0.1654  acc 0.970    98.8s
+  trap   symA  step  1100  loss 0.1075  acc 0.980   108.8s
+  trap   symA  step  1200  loss 0.1421  acc 0.984   118.3s
+  trap   symA  step  1300  loss 0.0542  acc 0.990   128.2s
+  trap   symA  step  1400  loss 0.0711  acc 0.991   138.3s
+  trap   symA  step  1500  loss 0.0543  acc 0.995   147.1s
+  trap   symA  step  1600  loss 0.0362  acc 0.994   154.6s
+  trap   symA  step  1700  loss 0.0348  acc 0.996   162.1s
+  trap   symA  step  1800  loss 0.0266  acc 0.997   169.6s
+  trap   symA  step  1900  loss 0.0179  acc 0.998   177.2s
+  trap   symA  step  2000  loss 0.0182  acc 0.997   184.9s
+  trap   symA  step  2100  loss 0.0192  acc 0.999   192.5s
+  trap   symA  step  2200  loss 0.0142  acc 0.998   200.1s
+  trap   symA  step  2300  loss 0.0066  acc 0.999   207.7s
+  trap   symA  step  2400  loss 0.0086  acc 0.999   215.4s
+  trap   symA  step  2500  loss 0.0106  acc 0.999   223.1s
+  trap   symA  step  2600  loss 0.0053  acc 1.000   230.6s
+  trap   symA  step  2700  loss 0.0021  acc 1.000   238.1s
+  trap   symA  step  2800  loss 0.0007  acc 1.000   245.6s
+  trap   symA  step  2900  loss 0.0005  acc 1.000   253.1s
+  trap   symA  step  3000  loss 0.0002  acc 1.000   260.6s
+  trap   fox   step   100  loss 4.6839  acc 0.030     6.5s
+  trap   fox   step   200  loss 4.3665  acc 0.048    13.1s
+  trap   fox   step   300  loss 4.1644  acc 0.059    19.6s
+  trap   fox   step   400  loss 4.0465  acc 0.065    26.1s
+  trap   fox   step   500  loss 3.9127  acc 0.066    32.6s
+  trap   fox   step   600  loss 3.8796  acc 0.073    39.1s
+  trap   fox   step   700  loss 3.8055  acc 0.067    45.7s
+  trap   fox   step   800  loss 3.7441  acc 0.074    52.2s
+  trap   fox   step   900  loss 3.7540  acc 0.072    58.7s
+  trap   fox   step  1000  loss 3.6910  acc 0.071    65.2s
+  trap   fox   step  1100  loss 3.6430  acc 0.072    71.7s
+  trap   fox   step  1200  loss 3.6353  acc 0.075    78.2s
+  trap   fox   step  1300  loss 3.6375  acc 0.072    84.7s
+  trap   fox   step  1400  loss 3.6026  acc 0.075    91.2s
+  trap   fox   step  1500  loss 3.6298  acc 0.074    97.8s
+  trap   fox   step  1600  loss 3.6083  acc 0.069   104.3s
+  trap   fox   step  1700  loss 3.5940  acc 0.074   110.8s
+  trap   fox   step  1800  loss 3.5753  acc 0.068   117.3s
+  trap   fox   step  1900  loss 3.6137  acc 0.072   123.9s
+  trap   fox   step  2000  loss 3.5920  acc 0.074   130.5s
+  trap   fox   step  2100  loss 3.5917  acc 0.071   137.0s
+  trap   fox   step  2200  loss 3.5880  acc 0.072   143.5s
+  trap   fox   step  2300  loss 3.5087  acc 0.070   150.0s
+  trap   fox   step  2400  loss 3.5552  acc 0.069   156.5s
+  trap   fox   step  2500  loss 3.5106  acc 0.070   163.0s
+  trap   fox   step  2600  loss 3.5307  acc 0.070   169.6s
+  trap   fox   step  2700  loss 3.4708  acc 0.075   176.1s
+  trap   fox   step  2800  loss 3.4469  acc 0.078   182.6s
+  trap   fox   step  2900  loss 3.4493  acc 0.076   189.2s
+  trap   fox   step  3000  loss 3.4151  acc 0.077   196.1s
+  copy   base  step   100  loss 0.5829  acc 1.000    10.7s
+  copy   base  step   200  loss 0.0153  acc 1.000    20.2s
+  copy   base  step   300  loss 0.0143  acc 1.000    29.8s
+  copy   base  step   400  loss 0.0059  acc 1.000    39.4s
+  copy   base  step   500  loss 0.0001  acc 1.000    48.9s
+  copy   base  step   600  loss 0.0001  acc 1.000    58.4s
+  copy   base  step   700  loss 0.0000  acc 1.000    67.9s
+  copy   base  step   800  loss 0.0001  acc 1.000    77.4s
+  copy   base  step   900  loss 0.0000  acc 1.000    87.0s
+  copy   base  step  1000  loss 0.0080  acc 1.000    96.5s
+  copy   base  step  1100  loss 0.0000  acc 1.000   106.0s
+  copy   base  step  1200  loss 0.0000  acc 1.000   115.5s
+  copy   base  step  1300  loss 0.0031  acc 0.999   125.1s
+  copy   base  step  1400  loss 0.0000  acc 1.000   134.6s
+  copy   base  step  1500  loss 0.0000  acc 1.000   144.2s
+  copy   base  step  1600  loss 0.0005  acc 1.000   153.7s
+  copy   base  step  1700  loss 0.0000  acc 1.000   163.3s
+  copy   base  step  1800  loss 0.0000  acc 1.000   172.8s
+  copy   base  step  1900  loss 0.0003  acc 1.000   182.4s
+  copy   base  step  2000  loss 0.0000  acc 1.000   192.0s
+  copy   base  step  2100  loss 0.0000  acc 1.000   201.5s
+  copy   base  step  2200  loss 0.0000  acc 1.000   211.1s
+  copy   base  step  2300  loss 0.0000  acc 1.000   220.7s
+  copy   base  step  2400  loss 0.0012  acc 1.000   230.2s
+  copy   base  step  2500  loss 0.0000  acc 1.000   239.8s
+  copy   base  step  2600  loss 0.0000  acc 1.000   249.3s
+  copy   base  step  2700  loss 0.0000  acc 1.000   258.8s
+  copy   base  step  2800  loss 0.0000  acc 1.000   268.4s
+  copy   base  step  2900  loss 0.0000  acc 1.000   278.0s
+  copy   base  step  3000  loss 0.0000  acc 1.000   287.6s
+  copy   symA  step   100  loss 4.1697  acc 0.018    10.2s
+  copy   symA  step   200  loss 4.1322  acc 0.031    20.3s
+  copy   symA  step   300  loss 4.1144  acc 0.034    30.5s
+  copy   symA  step   400  loss 4.1203  acc 0.036    40.6s
+  copy   symA  step   500  loss 4.0842  acc 0.040    50.8s
+  copy   symA  step   600  loss 4.1038  acc 0.038    60.9s
+  copy   symA  step   700  loss 3.9995  acc 0.044    71.4s
+  copy   symA  step   800  loss 3.3336  acc 0.093    82.1s
+  copy   symA  step   900  loss 2.3305  acc 0.163    92.8s
+  copy   symA  step  1000  loss 1.4957  acc 0.446   103.5s
+  copy   symA  step  1100  loss 0.6995  acc 0.884   114.1s
+  copy   symA  step  1200  loss 0.4716  acc 0.922   124.6s
+  copy   symA  step  1300  loss 0.4195  acc 0.936   135.0s
+  copy   symA  step  1400  loss 0.2850  acc 0.942   145.6s
+  copy   symA  step  1500  loss 0.2795  acc 0.951   156.3s
+  copy   symA  step  1600  loss 0.2307  acc 0.950   166.9s
+  copy   symA  step  1700  loss 0.2082  acc 0.955   177.5s
+  copy   symA  step  1800  loss 0.1967  acc 0.957   188.0s
+  copy   symA  step  1900  loss 0.1696  acc 0.956   198.5s
+  copy   symA  step  2000  loss 0.1575  acc 0.968   208.9s
+  copy   symA  step  2100  loss 0.1490  acc 0.955   219.6s
+  copy   symA  step  2200  loss 0.1352  acc 0.967   230.2s
+  copy   symA  step  2300  loss 0.1249  acc 0.971   240.9s
+  copy   symA  step  2400  loss 0.0859  acc 0.975   251.4s
+  copy   symA  step  2500  loss 0.0556  acc 0.985   262.0s
+  copy   symA  step  2600  loss 0.0581  acc 0.988   272.5s
+  copy   symA  step  2700  loss 0.0265  acc 0.993   283.1s
+  copy   symA  step  2800  loss 0.0148  acc 0.996   293.8s
+  copy   symA  step  2900  loss 0.0149  acc 0.997   304.4s
+  copy   symA  step  3000  loss 0.0039  acc 0.999   315.1s
+  copy   fox   step   100  loss 4.1713  acc 0.017     9.5s
+  copy   fox   step   200  loss 4.1369  acc 0.027    19.1s
+  copy   fox   step   300  loss 4.1229  acc 0.036    28.7s
+  copy   fox   step   400  loss 4.1281  acc 0.034    38.3s
+  copy   fox   step   500  loss 4.0969  acc 0.038    47.9s
+  copy   fox   step   600  loss 4.1247  acc 0.038    57.6s
+  copy   fox   step   700  loss 4.0842  acc 0.039    67.3s
+  copy   fox   step   800  loss 4.1174  acc 0.032    76.8s
+  copy   fox   step   900  loss 4.0889  acc 0.037    86.3s
+  copy   fox   step  1000  loss 4.0781  acc 0.040    95.9s
+  copy   fox   step  1100  loss 4.0748  acc 0.041   105.5s
+  copy   fox   step  1200  loss 4.0660  acc 0.040   115.2s
+  copy   fox   step  1300  loss 4.0701  acc 0.038   124.8s
+  copy   fox   step  1400  loss 4.1082  acc 0.037   134.6s
+  copy   fox   step  1500  loss 4.0706  acc 0.040   144.0s
+  copy   fox   step  1600  loss 4.0777  acc 0.040   153.5s
+  copy   fox   step  1700  loss 4.0633  acc 0.040   162.9s
+  copy   fox   step  1800  loss 4.0947  acc 0.037   172.5s
+  copy   fox   step  1900  loss 4.0631  acc 0.040   182.2s
+  copy   fox   step  2000  loss 4.0624  acc 0.040   191.9s
+  copy   fox   step  2100  loss 4.0727  acc 0.041   201.6s
+  copy   fox   step  2200  loss 4.0784  acc 0.040   211.0s
+  copy   fox   step  2300  loss 4.0485  acc 0.041   220.6s
+  copy   fox   step  2400  loss 4.0622  acc 0.039   230.3s
+  copy   fox   step  2500  loss 4.0614  acc 0.040   240.2s
+  copy   fox   step  2600  loss 4.0619  acc 0.042   249.9s
+  copy   fox   step  2700  loss 4.0401  acc 0.043   259.6s
+  copy   fox   step  2800  loss 4.0420  acc 0.041   269.3s
+  copy   fox   step  2900  loss 4.0532  acc 0.043   278.8s
+  copy   fox   step  3000  loss 4.0229  acc 0.044   288.4s
+
+final accuracy
+  mqar1  base=0.062  symA=1.000  fox=0.046
+  mqar3  base=0.068  symA=1.000  fox=0.051
+  fuzzy3 base=0.058  symA=0.237  fox=0.038
+  trap   base=0.072  symA=1.000  fox=0.077
+  copy   base=1.000  symA=0.999  fox=0.044
+
+{
+ "a_mqar3_symA_faster": {
+  "pass": true,
+  "steps": [
+   500,
+   600,
+   700,
+   800,
+   900,
+   1000,
+   1100,
+   1200,
+   1300,
+   1400,
+   1500,
+   1600,
+   1700,
+   1800,
+   1900,
+   2000,
+   2100,
+   2200,
+   2300,
+   2400,
+   2500,
+   2600,
+   2700,
+   2800,
+   2900,
+   3000
+  ]
+ },
+ "b_trap_no_harm": {
+  "pass": true,
+  "symA": 1.0,
+  "base": 0.072265625
+ },
+ "c_fuzzy_no_harm": {
+  "pass": true,
+  "symA": 0.23681640625,
+  "base": 0.057861328125
+ },
+ "d_leak_canary": {
+  "pass": true,
+  "base": 4.160305559635162,
+  "symA": 4.160232782363892,
+  "symA_leaky": 1.9260584115982056
+ },
+ "G1": "PASS"
+}

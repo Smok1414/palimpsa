@@ -1,0 +1,214 @@
+{
+ "benchmark": "AxiomicLabs/ArithMark-3.0",
+ "dataset_url": "https://huggingface.co/datasets/AxiomicLabs/Arithmark-3.0/resolve/main/arithmark-3.jsonl",
+ "official_scorer": "https://huggingface.co/datasets/AxiomicLabs/Arithmark-3.0/resolve/main/bencharithmark-3.py",
+ "dataset_sha256": "bf8ab1a5193d52cdf0e05ff0b3ca226bdfcf416cb6e75562dcbe72e7e4559435",
+ "examples": 1000,
+ "choices": 4000,
+ "random_baseline": 0.25,
+ "fewshot": 0,
+ "device": "NVIDIA GeForce RTX 2050",
+ "dtype": "float32",
+ "tokenization": "context and continuation independently with local Palimpsa tokenizer",
+ "bos_added": false,
+ "max_context": 1024,
+ "batch_size_choice_sequences": 32,
+ "primary_metric": "acc_norm, mean log-likelihood per continuation token",
+ "training_data_overlap_checked": false,
+ "results": {
+  "symA": {
+   "checkpoint": "runs/local_10m/S_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21745056,
+   "acc": 0.349,
+   "acc_correct": 349,
+   "acc_norm": 0.349,
+   "acc_norm_correct": 349,
+   "elapsed_seconds": 5.7,
+   "topics": {
+    "addition": {
+     "n": 128,
+     "acc": 0.1640625,
+     "acc_norm": 0.171875
+    },
+    "comparison": {
+     "n": 44,
+     "acc": 0.22727272727272727,
+     "acc_norm": 0.22727272727272727
+    },
+    "comparison_difference": {
+     "n": 48,
+     "acc": 0.3541666666666667,
+     "acc_norm": 0.3541666666666667
+    },
+    "data": {
+     "n": 43,
+     "acc": 0.3023255813953488,
+     "acc_norm": 0.27906976744186046
+    },
+    "division": {
+     "n": 54,
+     "acc": 0.3333333333333333,
+     "acc_norm": 0.3148148148148148
+    },
+    "fractions_counting": {
+     "n": 50,
+     "acc": 0.2,
+     "acc_norm": 0.24
+    },
+    "geometry_area": {
+     "n": 52,
+     "acc": 0.6346153846153846,
+     "acc_norm": 0.6346153846153846
+    },
+    "geometry_perimeter": {
+     "n": 45,
+     "acc": 0.6,
+     "acc_norm": 0.6
+    },
+    "measurement": {
+     "n": 76,
+     "acc": 0.3815789473684211,
+     "acc_norm": 0.3815789473684211
+    },
+    "money": {
+     "n": 64,
+     "acc": 0.328125,
+     "acc_norm": 0.328125
+    },
+    "multiplication": {
+     "n": 74,
+     "acc": 0.44594594594594594,
+     "acc_norm": 0.44594594594594594
+    },
+    "patterns": {
+     "n": 53,
+     "acc": 0.2830188679245283,
+     "acc_norm": 0.2830188679245283
+    },
+    "subtraction": {
+     "n": 117,
+     "acc": 0.19658119658119658,
+     "acc_norm": 0.19658119658119658
+    },
+    "time": {
+     "n": 55,
+     "acc": 1.0,
+     "acc_norm": 1.0
+    },
+    "two_step_add_subtract": {
+     "n": 46,
+     "acc": 0.30434782608695654,
+     "acc_norm": 0.30434782608695654
+    },
+    "two_step_addition": {
+     "n": 19,
+     "acc": 0.10526315789473684,
+     "acc_norm": 0.10526315789473684
+    },
+    "two_step_subtraction": {
+     "n": 32,
+     "acc": 0.25,
+     "acc_norm": 0.21875
+    }
+   }
+  },
+  "base": {
+   "checkpoint": "runs/local_10m/B_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21730944,
+   "acc": 0.326,
+   "acc_correct": 326,
+   "acc_norm": 0.329,
+   "acc_norm_correct": 329,
+   "elapsed_seconds": 5.01,
+   "topics": {
+    "addition": {
+     "n": 128,
+     "acc": 0.1640625,
+     "acc_norm": 0.1640625
+    },
+    "comparison": {
+     "n": 44,
+     "acc": 0.13636363636363635,
+     "acc_norm": 0.13636363636363635
+    },
+    "comparison_difference": {
+     "n": 48,
+     "acc": 0.375,
+     "acc_norm": 0.375
+    },
+    "data": {
+     "n": 43,
+     "acc": 0.20930232558139536,
+     "acc_norm": 0.20930232558139536
+    },
+    "division": {
+     "n": 54,
+     "acc": 0.3888888888888889,
+     "acc_norm": 0.3888888888888889
+    },
+    "fractions_counting": {
+     "n": 50,
+     "acc": 0.2,
+     "acc_norm": 0.24
+    },
+    "geometry_area": {
+     "n": 52,
+     "acc": 0.5769230769230769,
+     "acc_norm": 0.5769230769230769
+    },
+    "geometry_perimeter": {
+     "n": 45,
+     "acc": 0.4444444444444444,
+     "acc_norm": 0.4444444444444444
+    },
+    "measurement": {
+     "n": 76,
+     "acc": 0.34210526315789475,
+     "acc_norm": 0.34210526315789475
+    },
+    "money": {
+     "n": 64,
+     "acc": 0.265625,
+     "acc_norm": 0.28125
+    },
+    "multiplication": {
+     "n": 74,
+     "acc": 0.3918918918918919,
+     "acc_norm": 0.40540540540540543
+    },
+    "patterns": {
+     "n": 53,
+     "acc": 0.32075471698113206,
+     "acc_norm": 0.32075471698113206
+    },
+    "subtraction": {
+     "n": 117,
+     "acc": 0.2222222222222222,
+     "acc_norm": 0.2222222222222222
+    },
+    "time": {
+     "n": 55,
+     "acc": 1.0,
+     "acc_norm": 1.0
+    },
+    "two_step_add_subtract": {
+     "n": 46,
+     "acc": 0.2391304347826087,
+     "acc_norm": 0.2391304347826087
+    },
+    "two_step_addition": {
+     "n": 19,
+     "acc": 0.05263157894736842,
+     "acc_norm": 0.05263157894736842
+    },
+    "two_step_subtraction": {
+     "n": 32,
+     "acc": 0.28125,
+     "acc_norm": 0.25
+    }
+   }
+  }
+ }
+}

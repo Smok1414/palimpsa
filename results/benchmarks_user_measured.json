@@ -1,0 +1,468 @@
+{
+ "suite": "ARC-Easy, HellaSwag, PIQA, MathQA, ArithMark-3",
+ "models": {
+  "base": "B_d435",
+  "symA": "S_d435",
+  "fox": "A1_fox",
+  "ell_rope": "A3_ell_rope"
+ },
+ "common_checkpoint_step": 6638,
+ "device": "NVIDIA GeForce RTX 2050",
+ "dtype": "float32",
+ "fewshot": 0,
+ "results": {
+  "base": {
+   "checkpoint": "runs/local_10m/B_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21730944,
+   "benchmarks": {
+    "arc_easy": {
+     "acc": 0.4090909090909091,
+     "acc_correct": 972,
+     "acc_norm": 0.3720538720538721,
+     "acc_norm_correct": 884,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 23.87
+    },
+    "hellaswag": {
+     "acc": 0.2671778530173272,
+     "acc_correct": 2683,
+     "acc_norm": 0.27076279625572597,
+     "acc_norm_correct": 2719,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 120.58
+    },
+    "piqa": {
+     "acc": 0.5620239390642002,
+     "acc_correct": 1033,
+     "acc_norm": 0.5533188248095756,
+     "acc_norm_correct": 1017,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 4.72
+    },
+    "mathqa": {
+     "acc": 0.20335195530726258,
+     "acc_correct": 910,
+     "acc_norm": 0.20156424581005586,
+     "acc_norm_correct": 902,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 37.47
+    },
+    "arithmark3": {
+     "acc": 0.326,
+     "acc_correct": 326,
+     "acc_norm": 0.329,
+     "acc_norm_correct": 329,
+     "normalizer": "answer token count, official ArithMark-3 primary metric",
+     "elapsed_seconds": 4.64
+    }
+   }
+  },
+  "symA": {
+   "checkpoint": "runs/local_10m/S_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21745056,
+   "benchmarks": {
+    "arc_easy": {
+     "acc": 0.4027777777777778,
+     "acc_correct": 957,
+     "acc_norm": 0.3611111111111111,
+     "acc_norm_correct": 858,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 11.41
+    },
+    "hellaswag": {
+     "acc": 0.26757618004381595,
+     "acc_correct": 2687,
+     "acc_norm": 0.2746464847639912,
+     "acc_norm_correct": 2758,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 107.75
+    },
+    "piqa": {
+     "acc": 0.5609357997823722,
+     "acc_correct": 1031,
+     "acc_norm": 0.5522306855277476,
+     "acc_norm_correct": 1015,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 5.89
+    },
+    "mathqa": {
+     "acc": 0.20782122905027933,
+     "acc_correct": 930,
+     "acc_norm": 0.21162011173184359,
+     "acc_norm_correct": 947,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 43.4
+    },
+    "arithmark3": {
+     "acc": 0.349,
+     "acc_correct": 349,
+     "acc_norm": 0.349,
+     "acc_norm_correct": 349,
+     "normalizer": "answer token count, official ArithMark-3 primary metric",
+     "elapsed_seconds": 4.51
+    }
+   }
+  },
+  "fox": {
+   "checkpoint": "runs/local_10m/A1_fox/ckpt.pt",
+   "step": 6638,
+   "params": 21744804,
+   "benchmarks": {
+    "arc_easy": {
+     "acc": 0.4006734006734007,
+     "acc_correct": 952,
+     "acc_norm": 0.3602693602693603,
+     "acc_norm_correct": 856,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 10.45
+    },
+    "hellaswag": {
+     "acc": 0.2644891455885282,
+     "acc_correct": 2656,
+     "acc_norm": 0.26996614220274845,
+     "acc_norm_correct": 2711,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 97.22
+    },
+    "piqa": {
+     "acc": 0.5663764961915125,
+     "acc_correct": 1041,
+     "acc_norm": 0.5527747551686616,
+     "acc_norm_correct": 1016,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 5.14
+    },
+    "mathqa": {
+     "acc": 0.2100558659217877,
+     "acc_correct": 940,
+     "acc_norm": 0.22033519553072625,
+     "acc_norm_correct": 986,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 40.94
+    },
+    "arithmark3": {
+     "acc": 0.363,
+     "acc_correct": 363,
+     "acc_norm": 0.365,
+     "acc_norm_correct": 365,
+     "normalizer": "answer token count, official ArithMark-3 primary metric",
+     "elapsed_seconds": 4.38
+    }
+   }
+  },
+  "ell_rope": {
+   "checkpoint": "runs/local_10m/A3_ell_rope/ckpt.pt",
+   "step": 6638,
+   "params": 21731196,
+   "benchmarks": {
+    "arc_easy": {
+     "acc": 0.40446127946127947,
+     "acc_correct": 961,
+     "acc_norm": 0.36658249158249157,
+     "acc_norm_correct": 871,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 12.59
+    },
+    "hellaswag": {
+     "acc": 0.2666799442342163,
+     "acc_correct": 2678,
+     "acc_norm": 0.2724556861183031,
+     "acc_norm_correct": 2736,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 115.42
+    },
+    "piqa": {
+     "acc": 0.5750816104461371,
+     "acc_correct": 1057,
+     "acc_norm": 0.559847660500544,
+     "acc_norm_correct": 1029,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 5.82
+    },
+    "mathqa": {
+     "acc": 0.20893854748603352,
+     "acc_correct": 935,
+     "acc_norm": 0.20826815642458102,
+     "acc_norm_correct": 932,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 45.24
+    },
+    "arithmark3": {
+     "acc": 0.322,
+     "acc_correct": 322,
+     "acc_norm": 0.321,
+     "acc_norm_correct": 321,
+     "normalizer": "answer token count, official ArithMark-3 primary metric",
+     "elapsed_seconds": 4.83
+    }
+   }
+  },
+  "pythia-14m": {
+   "checkpoint": "EleutherAI/pythia-14m",
+   "revision": "cf967c0a9a04383db6f7b1108d86b2962634b4ac",
+   "step": "final",
+   "params": 14067712,
+   "benchmarks": {
+    "arc_easy": {
+     "acc": 0.3371212121212121,
+     "acc_correct": 801,
+     "acc_norm": 0.2958754208754209,
+     "acc_norm_correct": 703,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 7.81
+    },
+    "hellaswag": {
+     "acc": 0.2606054570802629,
+     "acc_correct": 2617,
+     "acc_norm": 0.2590121489743079,
+     "acc_norm_correct": 2601,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 54.19
+    },
+    "piqa": {
+     "acc": 0.5690968443960827,
+     "acc_correct": 1046,
+     "acc_norm": 0.5663764961915125,
+     "acc_norm_correct": 1041,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 5.2
+    },
+    "mathqa": {
+     "acc": 0.20268156424581005,
+     "acc_correct": 907,
+     "acc_norm": 0.21720670391061453,
+     "acc_norm_correct": 972,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 21.95
+    },
+    "arithmark3": {
+     "acc": 0.336,
+     "acc_correct": 336,
+     "acc_norm": 0.336,
+     "acc_norm_correct": 336,
+     "normalizer": "answer token count, official ArithMark-3 primary metric",
+     "elapsed_seconds": 2.62
+    }
+   }
+  },
+  "pythia-31m": {
+   "checkpoint": "EleutherAI/pythia-31m",
+   "revision": "e556ace21b489575e94e9d50b6dad2fcc7419679",
+   "step": "final",
+   "params": 30494720,
+   "benchmarks": {
+    "arc_easy": {
+     "acc": 0.36826599326599324,
+     "acc_correct": 875,
+     "acc_norm": 0.32575757575757575,
+     "acc_norm_correct": 774,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 8.77
+    },
+    "hellaswag": {
+     "acc": 0.26618203545110536,
+     "acc_correct": 2673,
+     "acc_norm": 0.26379207329217286,
+     "acc_norm_correct": 2649,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 74.04
+    },
+    "piqa": {
+     "acc": 0.5745375408052231,
+     "acc_correct": 1056,
+     "acc_norm": 0.5723612622415669,
+     "acc_norm_correct": 1052,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 11.29
+    },
+    "mathqa": {
+     "acc": 0.1975418994413408,
+     "acc_correct": 884,
+     "acc_norm": 0.21094972067039106,
+     "acc_norm_correct": 944,
+     "normalizer": "answer character count",
+     "elapsed_seconds": 139.49
+    },
+    "arithmark3": {
+     "acc": 0.355,
+     "acc_correct": 355,
+     "acc_norm": 0.355,
+     "acc_norm_correct": 355,
+     "normalizer": "answer token count, official ArithMark-3 primary metric",
+     "elapsed_seconds": 14.57
+    }
+   }
+  }
+ },
+ "paired_vs_base": {
+  "arc_easy": {
+   "acc_symA": {
+    "variant_only_correct": 200,
+    "base_only_correct": 215
+   },
+   "acc_fox": {
+    "variant_only_correct": 210,
+    "base_only_correct": 230
+   },
+   "acc_ell_rope": {
+    "variant_only_correct": 197,
+    "base_only_correct": 208
+   },
+   "acc_norm_symA": {
+    "variant_only_correct": 143,
+    "base_only_correct": 169
+   },
+   "acc_norm_fox": {
+    "variant_only_correct": 138,
+    "base_only_correct": 166
+   },
+   "acc_norm_ell_rope": {
+    "variant_only_correct": 146,
+    "base_only_correct": 159
+   }
+  },
+  "hellaswag": {
+   "acc_symA": {
+    "variant_only_correct": 225,
+    "base_only_correct": 221
+   },
+   "acc_fox": {
+    "variant_only_correct": 199,
+    "base_only_correct": 226
+   },
+   "acc_ell_rope": {
+    "variant_only_correct": 213,
+    "base_only_correct": 218
+   },
+   "acc_norm_symA": {
+    "variant_only_correct": 396,
+    "base_only_correct": 357
+   },
+   "acc_norm_fox": {
+    "variant_only_correct": 376,
+    "base_only_correct": 384
+   },
+   "acc_norm_ell_rope": {
+    "variant_only_correct": 354,
+    "base_only_correct": 337
+   }
+  },
+  "piqa": {
+   "acc_symA": {
+    "variant_only_correct": 93,
+    "base_only_correct": 95
+   },
+   "acc_fox": {
+    "variant_only_correct": 97,
+    "base_only_correct": 89
+   },
+   "acc_ell_rope": {
+    "variant_only_correct": 105,
+    "base_only_correct": 81
+   },
+   "acc_norm_symA": {
+    "variant_only_correct": 108,
+    "base_only_correct": 110
+   },
+   "acc_norm_fox": {
+    "variant_only_correct": 103,
+    "base_only_correct": 104
+   },
+   "acc_norm_ell_rope": {
+    "variant_only_correct": 114,
+    "base_only_correct": 102
+   }
+  },
+  "mathqa": {
+   "acc_symA": {
+    "variant_only_correct": 192,
+    "base_only_correct": 172
+   },
+   "acc_fox": {
+    "variant_only_correct": 295,
+    "base_only_correct": 265
+   },
+   "acc_ell_rope": {
+    "variant_only_correct": 230,
+    "base_only_correct": 205
+   },
+   "acc_norm_symA": {
+    "variant_only_correct": 234,
+    "base_only_correct": 189
+   },
+   "acc_norm_fox": {
+    "variant_only_correct": 356,
+    "base_only_correct": 272
+   },
+   "acc_norm_ell_rope": {
+    "variant_only_correct": 256,
+    "base_only_correct": 226
+   }
+  },
+  "arithmark3": {
+   "acc_symA": {
+    "variant_only_correct": 100,
+    "base_only_correct": 77
+   },
+   "acc_fox": {
+    "variant_only_correct": 106,
+    "base_only_correct": 69
+   },
+   "acc_ell_rope": {
+    "variant_only_correct": 83,
+    "base_only_correct": 87
+   },
+   "acc_norm_symA": {
+    "variant_only_correct": 96,
+    "base_only_correct": 76
+   },
+   "acc_norm_fox": {
+    "variant_only_correct": 102,
+    "base_only_correct": 66
+   },
+   "acc_norm_ell_rope": {
+    "variant_only_correct": 79,
+    "base_only_correct": 87
+   }
+  }
+ },
+ "dataset_sources": {
+  "arc_easy": {
+   "url": "https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/ARC-Easy/test-00000-of-00001.parquet",
+   "sha256": "4160597d618ae851c7eb04e281574f3f654776216ac6b6641588d64527b47177",
+   "examples": 2376,
+   "choices": 9501
+  },
+  "hellaswag": {
+   "url": "https://huggingface.co/datasets/Rowan/hellaswag/resolve/main/data/validation-00000-of-00001.parquet",
+   "sha256": "899813071e1e95efafec90f856e1987d2150fa4d020fc005df6962c259f660cd",
+   "examples": 10042,
+   "choices": 40168
+  },
+  "piqa": {
+   "url": "https://huggingface.co/datasets/baber/piqa/resolve/refs%2Fconvert%2Fparquet/default/validation/0000.parquet",
+   "sha256": "2b17ee1215b1ceb2ddabf4c90a05c5a8b833bef9d207960f57d111c43a2080f3",
+   "examples": 1838,
+   "choices": 3676
+  },
+  "mathqa": {
+   "url": "https://huggingface.co/datasets/regisss/math_qa/resolve/refs%2Fconvert%2Fparquet/default/validation/0000.parquet",
+   "sha256": "0a454ab2c9471bd7b3da4db03435d62e9d757f8fe6fed6dc267b0444e82ac855",
+   "examples": 4475,
+   "choices": 22375
+  },
+  "arithmark3": {
+   "url": "https://huggingface.co/datasets/AxiomicLabs/Arithmark-3.0/resolve/main/arithmark-3.jsonl",
+   "sha256": "bf8ab1a5193d52cdf0e05ff0b3ca226bdfcf416cb6e75562dcbe72e7e4559435",
+   "examples": 1000,
+   "choices": 4000
+  }
+ },
+ "limitations": "Validation is used where test labels are hidden. Training overlap was not checked.",
+ "device_for_pythia": "NVIDIA GeForce RTX 2050",
+ "pythia_dtype": "float32",
+ "pythia_tokenization": "model-native GPT-NeoX tokenizer; context and answer tokenized separately, no BOS",
+ "pythia_note": "Model scores use the official HF checkpoints. Pythia uses its own tokenizer."
+}

@@ -1,0 +1,53 @@
+{
+ "benchmark": "allenai/ai2_arc/ARC-Easy/test",
+ "dataset_url": "https://huggingface.co/datasets/allenai/ai2_arc/resolve/main/ARC-Easy/test-00000-of-00001.parquet",
+ "parquet_sha256": "4160597d618ae851c7eb04e281574f3f654776216ac6b6641588d64527b47177",
+ "questions": 2376,
+ "choice_counts": {
+  "3": 7,
+  "4": 2365,
+  "5": 4
+ },
+ "choices": 9501,
+ "uniform_choice_baseline": 0.25016133557800224,
+ "fewshot": 0,
+ "device": "NVIDIA GeForce RTX 2050",
+ "dtype": "float32",
+ "prompt": "Question: {question}\nAnswer:",
+ "document_prefix": "Palimpsa EOS token",
+ "answer_delimiter": " ",
+ "scoring": "Log-likelihood of each answer, normalized by answer character count for acc_norm",
+ "training_data_overlap_checked": false,
+ "results": {
+  "symA": {
+   "checkpoint": "runs/local_10m/S_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21745056,
+   "acc": 0.4027777777777778,
+   "acc_correct": 957,
+   "acc_norm": 0.3611111111111111,
+   "acc_norm_correct": 858,
+   "elapsed_seconds": 10.2
+  },
+  "base": {
+   "checkpoint": "runs/local_10m/B_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21730944,
+   "acc": 0.4090909090909091,
+   "acc_correct": 972,
+   "acc_norm": 0.3720538720538721,
+   "acc_norm_correct": 884,
+   "elapsed_seconds": 9.72
+  }
+ },
+ "paired": {
+  "acc": {
+   "symA_only_correct": 200,
+   "base_only_correct": 215
+  },
+  "acc_norm": {
+   "symA_only_correct": 143,
+   "base_only_correct": 169
+  }
+ }
+}

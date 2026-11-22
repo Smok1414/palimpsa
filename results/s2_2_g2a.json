@@ -1,0 +1,181 @@
+{
+ "session": "s2-2",
+ "started": "2026-11-21 23:18:54 UTC",
+ "dry_run": false,
+ "lr": {
+  "Base": "3e-3",
+  "SymA": "3e-3"
+ },
+ "lr_choice_s2_1": {
+  "Base": "3e-3",
+  "SymA": "3e-3"
+ },
+ "lr_matches_s2_1": true,
+ "gpus": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "sha256": {
+  "files_checked": 78,
+  "mismatched": []
+ },
+ "tests": {
+  "returncode": 0,
+  "seconds": 47.0,
+  "log": "s2/tests.log"
+ },
+ "runs": {
+  "B_long_a": {
+   "steps_done": 5642,
+   "first_loss": 10.46776,
+   "last_loss": 3.03998,
+   "tok_s_median": 37743,
+   "peak_gib": 6.12,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.8580080911380175,
+    "code": 2.0984629137512143,
+    "math": 2.8063846583107765,
+    "macro": 2.9209518877333362
+   },
+   "final_eval_step": 5500,
+   "end": {
+    "event": "end",
+    "step": 5642,
+    "reason": "stop_at 5642",
+    "skipped": 0,
+    "minutes": 181.79
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7496,
+    "at_step": 3914,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 10911.8,
+   "gpu": 0
+  },
+  "B_d435": {
+   "steps_done": 6638,
+   "first_loss": 3.34443,
+   "last_loss": 3.28328,
+   "tok_s_median": 37672,
+   "peak_gib": 5.09,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.653145903762846,
+    "code": 1.9202199871221701,
+    "math": 2.6193139409517503,
+    "macro": 2.730893277278922
+   },
+   "final_eval_step": 6638,
+   "end": {
+    "event": "end",
+    "step": 6638,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 29.73
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.6571,
+    "at_step": 6012,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 1788.3,
+   "gpu": 0
+  },
+  "S_long_a": {
+   "steps_done": 5642,
+   "first_loss": 10.4232,
+   "last_loss": 3.0097,
+   "tok_s_median": 32680,
+   "peak_gib": 6.34,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.8371655370710958,
+    "code": 2.0701556221762387,
+    "math": 2.7717392083385426,
+    "macro": 2.893020122528626
+   },
+   "final_eval_step": 5500,
+   "end": {
+    "event": "end",
+    "step": 5642,
+    "reason": "stop_at 5642",
+    "skipped": 0,
+    "minutes": 211.28
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7367,
+    "at_step": 3914,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 12682.0,
+   "gpu": 1
+  },
+  "S_d435": {
+   "steps_done": 6638,
+   "first_loss": 3.32362,
+   "last_loss": 3.2726,
+   "tok_s_median": 32594,
+   "peak_gib": 6.34,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.633684500596728,
+    "code": 1.8975625351368766,
+    "math": 2.592966799125337,
+    "macro": 2.708071278286314
+   },
+   "final_eval_step": 6638,
+   "end": {
+    "event": "end",
+    "step": 6638,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 34.51
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.6623,
+    "at_step": 6012,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 2075.7,
+   "gpu": 1
+  }
+ },
+ "g2a": {
+  "delta": {
+   "macro": -0.022821998992608172,
+   "web": -0.019461403166117996,
+   "code": -0.022657451985293564,
+   "math": -0.02634714182641318
+  },
+  "base": {
+   "web": 3.653145903762846,
+   "code": 1.9202199871221701,
+   "math": 2.6193139409517503,
+   "macro": 2.730893277278922
+  },
+  "symA": {
+   "web": 3.633684500596728,
+   "code": 1.8975625351368766,
+   "math": 2.592966799125337,
+   "macro": 2.708071278286314
+  },
+  "verdict": "continue to G2b",
+  "stop_reasons": [],
+  "within_noise": false
+ },
+ "ended": "2026-11-22 03:26:22 UTC"
+}

@@ -1,0 +1,51 @@
+{
+ "note": "Short smoke probes on one T4 each (fp16 AMP); tok_s_steady_median is the median over steady steps.",
+ "probe_100M_micro4": {
+  "base": {
+   "first_loss": 8.82981,
+   "last_loss": 7.38342,
+   "tok_s_steady_median": 12702,
+   "peak_gib": 4.91,
+   "skipped": 0,
+   "steps": 40,
+   "micro_batch": 4
+  },
+  "symA": {
+   "first_loss": 8.77072,
+   "last_loss": 7.57142,
+   "tok_s_steady_median": 10418,
+   "peak_gib": 6.12,
+   "skipped": 0,
+   "steps": 40,
+   "micro_batch": 4
+  }
+ },
+ "smoke_10M_micro16": {
+  "base": {
+   "first_loss": 10.46776,
+   "last_loss": 6.88089,
+   "tok_s_steady_median": 39039,
+   "peak_gib": 5.09,
+   "skipped": 0,
+   "steps": 50,
+   "micro_batch": 16
+  },
+  "symA": {
+   "first_loss": 10.4232,
+   "last_loss": 6.80807,
+   "tok_s_steady_median": 32563,
+   "peak_gib": 6.3,
+   "skipped": 0,
+   "steps": 50,
+   "micro_batch": 16
+  }
+ },
+ "resume_check_cuda": {
+  "max_abs_dloss_steps_1_25_noise_floor": 0.08395,
+  "steps_compared_before": 25,
+  "max_abs_dloss_steps_26_35_after_resume": 0.02385,
+  "steps_compared_after": 10,
+  "tolerance": 0.01,
+  "ok": false
+ }
+}

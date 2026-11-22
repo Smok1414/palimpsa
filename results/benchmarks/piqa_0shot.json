@@ -1,0 +1,50 @@
+{
+ "benchmark": "baber/piqa/validation",
+ "dataset_url": "https://huggingface.co/datasets/baber/piqa/resolve/refs%2Fconvert%2Fparquet/default/validation/0000.parquet",
+ "task_config": "https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/piqa/piqa.yaml",
+ "parquet_sha256": "2b17ee1215b1ceb2ddabf4c90a05c5a8b833bef9d207960f57d111c43a2080f3",
+ "examples": 1838,
+ "choices": 3676,
+ "choices_per_example": 2,
+ "uniform_choice_baseline": 0.5,
+ "fewshot": 0,
+ "device": "NVIDIA GeForce RTX 2050",
+ "dtype": "float32",
+ "prompt": "Question: {goal}\nAnswer:",
+ "document_prefix": "Palimpsa EOS token",
+ "answer_delimiter": " ",
+ "scoring": "Answer log-likelihood; acc_norm divides by answer character count",
+ "training_data_overlap_checked": false,
+ "results": {
+  "symA": {
+   "checkpoint": "runs/local_10m/S_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21745056,
+   "acc": 0.5609357997823722,
+   "acc_correct": 1031,
+   "acc_norm": 0.5522306855277476,
+   "acc_norm_correct": 1015,
+   "elapsed_seconds": 5.66
+  },
+  "base": {
+   "checkpoint": "runs/local_10m/B_d435/ckpt.pt",
+   "step": 6638,
+   "params": 21730944,
+   "acc": 0.5620239390642002,
+   "acc_correct": 1033,
+   "acc_norm": 0.5533188248095756,
+   "acc_norm_correct": 1017,
+   "elapsed_seconds": 4.95
+  }
+ },
+ "paired": {
+  "acc": {
+   "symA_only_correct": 93,
+   "base_only_correct": 95
+  },
+  "acc_norm": {
+   "symA_only_correct": 108,
+   "base_only_correct": 110
+  }
+ }
+}

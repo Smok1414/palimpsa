@@ -1,0 +1,126 @@
+{
+ "repetition": {
+  "settings": {
+   "domains": [
+    "web",
+    "code"
+   ],
+   "per_domain": 50,
+   "prompt_len": 32,
+   "new_tokens": 120,
+   "temperatures": [
+    0.3,
+    0.7
+   ],
+   "top_k": 0,
+   "top_p": 1.0,
+   "repetition_penalty": 1.0,
+   "seed": 0,
+   "repeating_if": "tail_share >= 0.25 or distinct4 < 0.5"
+  },
+  "reference": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.9900854700854701,
+    "tail_share_mean": 0.0,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.0,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.9162393162393164,
+    "tail_share_mean": 0.0016666666666666666,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.0,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0
+   }
+  },
+  "T=0.3": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.3054700854700855,
+    "tail_share_mean": 0.6523333333333333,
+    "share_tail_loop": 0.74,
+    "share_low_distinct4": 0.94,
+    "share_repeats": 0.94,
+    "share_eos_early": 0.02,
+    "mean_len": 117.7,
+    "gen_tokens": 5885,
+    "gen_seconds": 14.06,
+    "gen_tok_s": 418.5
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.34205128205128205,
+    "tail_share_mean": 0.6008333333333333,
+    "share_tail_loop": 0.76,
+    "share_low_distinct4": 0.8,
+    "share_repeats": 0.8,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0,
+    "gen_tokens": 6000,
+    "gen_seconds": 13.36,
+    "gen_tok_s": 449.2
+   },
+   "all": {
+    "n": 50.0,
+    "distinct4_mean": 0.3237606837606838,
+    "tail_share_mean": 0.6265833333333333,
+    "share_tail_loop": 0.75,
+    "share_low_distinct4": 0.87,
+    "share_repeats": 0.87,
+    "share_eos_early": 0.01,
+    "mean_len": 118.85,
+    "gen_tokens": 5942.5,
+    "gen_seconds": 13.71,
+    "gen_tok_s": 433.85
+   }
+  },
+  "T=0.7": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.7327198658039777,
+    "tail_share_mean": 0.0715,
+    "share_tail_loop": 0.12,
+    "share_low_distinct4": 0.22,
+    "share_repeats": 0.22,
+    "share_eos_early": 0.02,
+    "mean_len": 119.8,
+    "gen_tokens": 5990,
+    "gen_seconds": 13.38,
+    "gen_tok_s": 447.6
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.5986324786324786,
+    "tail_share_mean": 0.15749999999999997,
+    "share_tail_loop": 0.24,
+    "share_low_distinct4": 0.38,
+    "share_repeats": 0.42,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0,
+    "gen_tokens": 6000,
+    "gen_seconds": 13.19,
+    "gen_tok_s": 455.0
+   },
+   "all": {
+    "n": 50.0,
+    "distinct4_mean": 0.6656761722182282,
+    "tail_share_mean": 0.11449999999999999,
+    "share_tail_loop": 0.18,
+    "share_low_distinct4": 0.3,
+    "share_repeats": 0.32,
+    "share_eos_early": 0.01,
+    "mean_len": 119.9,
+    "gen_tokens": 5995.0,
+    "gen_seconds": 13.285,
+    "gen_tok_s": 451.3
+   }
+  }
+ }
+}

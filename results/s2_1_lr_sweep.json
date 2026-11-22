@@ -1,0 +1,307 @@
+{
+ "session": "s2-1",
+ "started": "2026-11-21 20:20:40 UTC",
+ "dry_run": false,
+ "gpus": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "sha256": {
+  "files_checked": 78,
+  "mismatched": []
+ },
+ "tests": {
+  "returncode": 0,
+  "seconds": 55.9,
+  "log": "s2/tests.log"
+ },
+ "runs": {
+  "speed30_base": {
+   "steps_done": 20,
+   "first_loss": 10.024,
+   "last_loss": 7.5423,
+   "tok_s_median": 23199,
+   "peak_gib": 8.5,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 7.694345544121461,
+    "code": 7.406830483523663,
+    "math": 6.839735814661253,
+    "macro": 7.313637280768792
+   },
+   "final_eval_step": 20,
+   "end": {
+    "event": "end",
+    "step": 20,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 0.96
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.0,
+    "at_step": null,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 62.2,
+   "gpu": 0
+  },
+  "speed30_symA": {
+   "steps_done": 20,
+   "first_loss": 10.0955,
+   "last_loss": 7.46895,
+   "tok_s_median": 18679,
+   "peak_gib": 11.22,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 7.630844954692293,
+    "code": 7.381223509466508,
+    "math": 6.630596538132522,
+    "macro": 7.214221667430441
+   },
+   "final_eval_step": 20,
+   "end": {
+    "event": "end",
+    "step": 20,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 1.3
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.0,
+    "at_step": null,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 83.2,
+   "gpu": 1
+  },
+  "sweep_B_1.5e-3": {
+   "steps_done": 1526,
+   "first_loss": 10.46776,
+   "last_loss": 3.37241,
+   "tok_s_median": 40329,
+   "peak_gib": 6.12,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 4.017338118432534,
+    "code": 2.246200213588597,
+    "math": 2.946940850776219,
+    "macro": 3.070159727599117
+   },
+   "final_eval_step": 1526,
+   "end": {
+    "event": "end",
+    "step": 1526,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 42.93
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7031,
+    "at_step": 999,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 2579.8,
+   "gpu": 0
+  },
+  "sweep_B_3e-3": {
+   "steps_done": 1526,
+   "first_loss": 10.46776,
+   "last_loss": 3.35453,
+   "tok_s_median": 40346,
+   "peak_gib": 6.12,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.9961756701014632,
+    "code": 2.223597643401718,
+    "math": 2.9286086541004948,
+    "macro": 3.049460655867892
+   },
+   "final_eval_step": 1526,
+   "end": {
+    "event": "end",
+    "step": 1526,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 42.92
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7195,
+    "at_step": 999,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 2579.0,
+   "gpu": 0
+  },
+  "sweep_B_6e-3": {
+   "steps_done": 1526,
+   "first_loss": 10.46776,
+   "last_loss": 3.36749,
+   "tok_s_median": 40342,
+   "peak_gib": 6.12,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 4.005902298386255,
+    "code": 2.237471187175977,
+    "math": 2.934525075132899,
+    "macro": 3.05929952023171
+   },
+   "final_eval_step": 1526,
+   "end": {
+    "event": "end",
+    "step": 1526,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 42.92
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7102,
+    "at_step": 999,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 2578.8,
+   "gpu": 0
+  },
+  "sweep_S_1.5e-3": {
+   "steps_done": 1526,
+   "first_loss": 10.4232,
+   "last_loss": 3.3446,
+   "tok_s_median": 32882,
+   "peak_gib": 6.34,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.9861260560389224,
+    "code": 2.215152108088385,
+    "math": 2.8994299815613944,
+    "macro": 3.033569381896234
+   },
+   "final_eval_step": 1526,
+   "end": {
+    "event": "end",
+    "step": 1526,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 52.94
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7128,
+    "at_step": 999,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 3181.2,
+   "gpu": 1
+  },
+  "sweep_S_3e-3": {
+   "steps_done": 1526,
+   "first_loss": 10.4232,
+   "last_loss": 3.32004,
+   "tok_s_median": 32891,
+   "peak_gib": 6.34,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.965301729583553,
+    "code": 2.194674828194564,
+    "math": 2.885175699650052,
+    "macro": 3.0150507524760566
+   },
+   "final_eval_step": 1526,
+   "end": {
+    "event": "end",
+    "step": 1526,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 52.86
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7218,
+    "at_step": 999,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 3176.2,
+   "gpu": 1
+  },
+  "sweep_S_6e-3": {
+   "steps_done": 1526,
+   "first_loss": 10.4232,
+   "last_loss": 3.34976,
+   "tok_s_median": 32894,
+   "peak_gib": 6.34,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.990734303416701,
+    "code": 2.2031984548016093,
+    "math": 2.894961659279375,
+    "macro": 3.029631472499228
+   },
+   "final_eval_step": 1526,
+   "end": {
+    "event": "end",
+    "step": 1526,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 52.85
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7391,
+    "at_step": 999,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 3175.9,
+   "gpu": 1
+  }
+ },
+ "lr_choice": {
+  "Base": {
+   "choice": "3e-3",
+   "argmin": "3e-3",
+   "within_0.005": [
+    "3e-3"
+   ],
+   "valid": {
+    "1.5e-3": 3.070159727599117,
+    "3e-3": 3.049460655867892,
+    "6e-3": 3.05929952023171
+   },
+   "excluded": {},
+   "extra_point_needed": null
+  },
+  "SymA": {
+   "choice": "3e-3",
+   "argmin": "3e-3",
+   "within_0.005": [
+    "3e-3"
+   ],
+   "valid": {
+    "1.5e-3": 3.033569381896234,
+    "3e-3": 3.0150507524760566,
+    "6e-3": 3.029631472499228
+   },
+   "excluded": {},
+   "extra_point_needed": null
+  }
+ },
+ "ended": "2026-11-21 23:02:42 UTC"
+}

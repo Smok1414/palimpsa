@@ -1,0 +1,126 @@
+{
+ "repetition": {
+  "settings": {
+   "domains": [
+    "web",
+    "code"
+   ],
+   "per_domain": 50,
+   "prompt_len": 32,
+   "new_tokens": 120,
+   "temperatures": [
+    0.3,
+    0.7
+   ],
+   "top_k": 0,
+   "top_p": 1.0,
+   "repetition_penalty": 1.2,
+   "seed": 0,
+   "repeating_if": "tail_share >= 0.25 or distinct4 < 0.5"
+  },
+  "reference": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.9900854700854701,
+    "tail_share_mean": 0.0,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.0,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.9162393162393164,
+    "tail_share_mean": 0.0016666666666666666,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.0,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0
+   }
+  },
+  "T=0.3": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.6456410256410257,
+    "tail_share_mean": 0.22516666666666665,
+    "share_tail_loop": 0.3,
+    "share_low_distinct4": 0.3,
+    "share_repeats": 0.34,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0,
+    "gen_tokens": 6000,
+    "gen_seconds": 10.98,
+    "gen_tok_s": 546.5
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.5767521367521367,
+    "tail_share_mean": 0.2905,
+    "share_tail_loop": 0.44,
+    "share_low_distinct4": 0.4,
+    "share_repeats": 0.52,
+    "share_eos_early": 0.02,
+    "mean_len": 119.54,
+    "gen_tokens": 5977,
+    "gen_seconds": 10.83,
+    "gen_tok_s": 552.0
+   },
+   "all": {
+    "n": 50.0,
+    "distinct4_mean": 0.6111965811965812,
+    "tail_share_mean": 0.2578333333333333,
+    "share_tail_loop": 0.37,
+    "share_low_distinct4": 0.35,
+    "share_repeats": 0.43000000000000005,
+    "share_eos_early": 0.01,
+    "mean_len": 119.77000000000001,
+    "gen_tokens": 5988.5,
+    "gen_seconds": 10.905000000000001,
+    "gen_tok_s": 549.25
+   }
+  },
+  "T=0.7": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.9911111111111112,
+    "tail_share_mean": 0.0,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.0,
+    "share_eos_early": 0.1,
+    "mean_len": 115.42,
+    "gen_tokens": 5771,
+    "gen_seconds": 11.01,
+    "gen_tok_s": 524.0
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.9042847134650414,
+    "tail_share_mean": 0.009625,
+    "share_tail_loop": 0.02,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.02,
+    "share_eos_early": 0.04,
+    "mean_len": 117.88,
+    "gen_tokens": 5894,
+    "gen_seconds": 11.01,
+    "gen_tok_s": 535.2
+   },
+   "all": {
+    "n": 50.0,
+    "distinct4_mean": 0.9476979122880762,
+    "tail_share_mean": 0.0048125,
+    "share_tail_loop": 0.01,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.01,
+    "share_eos_early": 0.07,
+    "mean_len": 116.65,
+    "gen_tokens": 5832.5,
+    "gen_seconds": 11.01,
+    "gen_tok_s": 529.6
+   }
+  }
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "session": "s2-3a",
+ "started": "2026-11-22 16:00:43 UTC",
+ "dry_run": false,
+ "lr": {
+  "Base": "3e-3",
+  "SymA": "3e-3"
+ },
+ "lr_matches_s2_2": true,
+ "gpus": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "sha256": {
+  "files_checked": 78,
+  "mismatched": []
+ },
+ "tests": {
+  "returncode": 0,
+  "seconds": 46.1,
+  "log": "s2/tests.log"
+ },
+ "runs": {
+  "A1_fox": {
+   "steps_done": 6638,
+   "first_loss": 10.4232,
+   "last_loss": 3.28772,
+   "tok_s_median": 32345,
+   "peak_gib": 6.28,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.646326198843549,
+    "code": 1.9195270890477156,
+    "math": 2.6107761273938133,
+    "macro": 2.725543138428359
+   },
+   "final_eval_step": 6638,
+   "end": {
+    "event": "end",
+    "step": 6638,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 230.81
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7274,
+    "at_step": 3914,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 13853.9,
+   "gpu": 0
+  },
+  "A3_ell_rope": {
+   "steps_done": 6638,
+   "first_loss": 10.46776,
+   "last_loss": 3.27012,
+   "tok_s_median": 31920,
+   "peak_gib": 6.27,
+   "skipped": 0,
+   "skipped_frac": 0.0,
+   "final_eval": {
+    "web": 3.6375315700390756,
+    "code": 1.9006088670767904,
+    "math": 2.599203427755301,
+    "macro": 2.7124479549570553
+   },
+   "final_eval_step": 6638,
+   "end": {
+    "event": "end",
+    "step": 6638,
+    "reason": "finished",
+    "skipped": 0,
+    "minutes": 234.85
+   },
+   "spike": {
+    "max_excess_over_running_min": 0.7499,
+    "at_step": 3914,
+    "unrecovered_spike": false
+   },
+   "state": "done",
+   "rc": 0,
+   "seconds": 14096.1,
+   "gpu": 1
+  }
+ },
+ "g2b": {
+  "symA_minus_A1": {
+   "macro": -0.01747186014204516,
+   "web": -0.01264169824682071,
+   "code": -0.02196455391083907,
+   "math": -0.017809328268476143
+  },
+  "A3_minus_base": {
+   "macro": -0.018445322321866797,
+   "web": -0.015614333723770635,
+   "code": -0.019611120045379682,
+   "math": -0.020110513196449187
+  },
+  "evals": {
+   "Base": {
+    "web": 3.653145903762846,
+    "code": 1.9202199871221701,
+    "math": 2.6193139409517503,
+    "macro": 2.730893277278922
+   },
+   "SymA": {
+    "web": 3.633684500596728,
+    "code": 1.8975625351368766,
+    "math": 2.592966799125337,
+    "macro": 2.708071278286314
+   },
+   "A1_fox": {
+    "web": 3.646326198843549,
+    "code": 1.9195270890477156,
+    "math": 2.6107761273938133,
+    "macro": 2.725543138428359
+   },
+   "A3_ell_rope": {
+    "web": 3.6375315700390756,
+    "code": 1.9006088670767904,
+    "math": 2.599203427755301,
+    "macro": 2.7124479549570553
+   }
+  },
+  "verdict": "continue",
+  "l_helps": {
+   "without_rope": true,
+   "with_rope": true
+  }
+ },
+ "ended": "2026-11-22 19:57:09 UTC"
+}

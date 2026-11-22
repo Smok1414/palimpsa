@@ -1,0 +1,73 @@
+{
+ "train": {
+  "web": {
+   "train_tokens": 1585818532,
+   "train_docs": 1452946,
+   "files": [
+    "000_00000.parquet",
+    "001_00000.parquet"
+   ]
+  },
+  "code": {
+   "train_tokens": 527949558,
+   "train_docs": 332386,
+   "files": [
+    "python-0000.json.gz",
+    "python-0001.json.gz",
+    "python-0002.json.gz",
+    "python-0003.json.gz",
+    "python-0004.json.gz"
+   ]
+  },
+  "math": {
+   "train_tokens": 333731463,
+   "train_docs": 207887,
+   "files": [
+    "train-00000-of-00064.parquet",
+    "train-00001-of-00064.parquet"
+   ]
+  }
+ },
+ "validation_dedup": {
+  "web": {
+   "val_raw_docs": 2054,
+   "val_raw_tokens": 2241999,
+   "dropped_exact": 18,
+   "dropped_overlap_13gram": 45,
+   "val_docs": 1991,
+   "val_tokens": 2185289
+  },
+  "code": {
+   "val_raw_docs": 1554,
+   "val_raw_tokens": 2527372,
+   "dropped_exact": 0,
+   "dropped_overlap_13gram": 60,
+   "val_docs": 1494,
+   "val_tokens": 2444229
+  },
+  "math": {
+   "val_raw_docs": 1473,
+   "val_raw_tokens": 2229852,
+   "dropped_exact": 0,
+   "dropped_overlap_13gram": 107,
+   "val_docs": 1366,
+   "val_tokens": 2058640
+  }
+ },
+ "validation_dedup_settings": {
+  "ngram": 13,
+  "overlap_frac": 0.5,
+  "seconds": 293
+ },
+ "tokenizer": {
+  "vocab": 32000,
+  "eos_id": 0,
+  "pad_id": 1,
+  "sample_mb": 300.0,
+  "bytes_per_token": {
+   "web": 4.414,
+   "code": 3.377,
+   "math": 3.018
+  }
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "repetition": {
+  "settings": {
+   "domains": [
+    "web",
+    "code"
+   ],
+   "per_domain": 50,
+   "prompt_len": 32,
+   "new_tokens": 120,
+   "temperatures": [
+    0.3,
+    0.7
+   ],
+   "top_k": 0,
+   "top_p": 1.0,
+   "repetition_penalty": 1.2,
+   "seed": 0,
+   "repeating_if": "tail_share >= 0.25 or distinct4 < 0.5"
+  },
+  "reference": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.9900854700854701,
+    "tail_share_mean": 0.0,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.0,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.9162393162393164,
+    "tail_share_mean": 0.0016666666666666666,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.0,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0
+   }
+  },
+  "T=0.3": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.5570940170940171,
+    "tail_share_mean": 0.25366666666666665,
+    "share_tail_loop": 0.34,
+    "share_low_distinct4": 0.38,
+    "share_repeats": 0.44,
+    "share_eos_early": 0.02,
+    "mean_len": 117.7
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.5948717948717949,
+    "tail_share_mean": 0.297,
+    "share_tail_loop": 0.38,
+    "share_low_distinct4": 0.44,
+    "share_repeats": 0.46,
+    "share_eos_early": 0.0,
+    "mean_len": 120.0
+   },
+   "all": {
+    "n": 50.0,
+    "distinct4_mean": 0.575982905982906,
+    "tail_share_mean": 0.2753333333333333,
+    "share_tail_loop": 0.36,
+    "share_low_distinct4": 0.41000000000000003,
+    "share_repeats": 0.45,
+    "share_eos_early": 0.01,
+    "mean_len": 118.85
+   }
+  },
+  "T=0.7": {
+   "web": {
+    "n": 50,
+    "distinct4_mean": 0.9666666666666666,
+    "tail_share_mean": 0.0,
+    "share_tail_loop": 0.0,
+    "share_low_distinct4": 0.02,
+    "share_repeats": 0.02,
+    "share_eos_early": 0.02,
+    "mean_len": 119.12
+   },
+   "code": {
+    "n": 50,
+    "distinct4_mean": 0.8996119196119196,
+    "tail_share_mean": 0.01633333333333333,
+    "share_tail_loop": 0.04,
+    "share_low_distinct4": 0.0,
+    "share_repeats": 0.04,
+    "share_eos_early": 0.04,
+    "mean_len": 118.16
+   },
+   "all": {
+    "n": 50.0,
+    "distinct4_mean": 0.933139293139293,
+    "tail_share_mean": 0.008166666666666666,
+    "share_tail_loop": 0.02,
+    "share_low_distinct4": 0.01,
+    "share_repeats": 0.03,
+    "share_eos_early": 0.03,
+    "mean_len": 118.64
+   }
+  }
+ }
+}

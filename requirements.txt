@@ -1,0 +1,7 @@
+torch>=2.4
+numpy
+pytest
+# data preparation and evaluation only
+pyarrow
+tokenizers
+huggingface_hub
