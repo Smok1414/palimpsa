@@ -37,12 +37,13 @@ The code also contains two further candidates, a gated residual stream (`--resid
 attention output (`--attn-gate`). They have unit tests but **no training results**, and they are not part of the
 claims below.
 
-## Established results
+## Measured results (single seed)
 
-Everything in this section is measured, and every number comes from a file in [`results/`](results/)
-(see [`docs/PROVENANCE.md`](docs/PROVENANCE.md) for the number-to-file table). **Unless a row says otherwise, each
-number is a single training run (one seed).** The project plans with a one-seed noise level of up to 0.012 nats/token
-in validation loss. That is a planning assumption, not a measurement: no second seed has been run yet.
+Every number in this section comes from a file in [`results/`](results/) (see
+[`docs/PROVENANCE.md`](docs/PROVENANCE.md) for the number-to-file table). **Every training result is a single run
+(one seed), so all differences between models are tentative.** The project assumes a one-seed noise level of up to
+0.012 nats/token in validation loss. That is a planning assumption: **the real seed-to-seed noise has not been
+measured yet.** It can only be estimated after a second seed has been run (proposed, not started).
 
 Setup of the 10M-class runs: d_model 384, 6 layers, 6 heads with 2 KV heads, d_ff 1024, tied embeddings, 32,000-token
 byte-level BPE. 21,730,944 parameters for Base and 21,745,056 for SymA, of which 12,288,000 are the
@@ -135,10 +136,11 @@ Differences of validation loss (negative = better):
 | forget gate + no RoPE vs RoPE, with ℓ (SymA - A3) | -0.0044 | -0.0038 | -0.0030 | -0.0062 |
 | everything together (SymA - Base) | -0.0228 | -0.0195 | -0.0227 | -0.0263 |
 
-Gate verdict from the script: `continue`. Reading: **most of the SymA-vs-Base difference comes from the ℓ bias**
-(about -0.0175 without RoPE and -0.0184 with RoPE). The forget gate together with removing
-RoPE adds only -0.0054 and -0.0044 in the two settings, which is at the edge of the assumed
-one-seed noise. These two effects are not separated yet: that needs A2 (SymA + RoPE), which is not finished.
+Gate verdict from the script: `continue`. **Tentative reading (one seed):** most of the SymA-vs-Base difference
+appears to come from the ℓ bias (about -0.0175 without RoPE and -0.0184 with RoPE). The
+forget gate together with removing RoPE adds only -0.0054 and -0.0044 in the two
+settings, which is at the edge of the assumed (not measured) one-seed noise. These two effects are not separated yet:
+that needs A2 (SymA + RoPE), which is not finished.
 
 ## What is NOT established yet
 
@@ -154,11 +156,12 @@ one-seed noise. These two effects are not separated yet: that needs A2 (SymA + R
 - BLiMP and LAMBADA evaluation code is included (`palimpsa/eval.py`); no BLiMP or LAMBADA result on the trained 10M
   models is reported here.
 
-## Benchmarks (user-measured)
+## Benchmarks (user-measured; run by the owner, harness not included)
 
-Zero-shot accuracies of the four 10M-class models at step 6,638, measured by the project owner on a local GPU
-(float32, 0-shot, log-likelihood scoring; each cell is `acc / acc_norm` in %). The evaluation harness for these
-benchmarks is **not** part of this repository; the protocols and raw counts are in `results/benchmarks/`.
+Zero-shot accuracies of the four 10M-class models at step 6,638, run by the project owner on a local GPU
+(float32, 0-shot, log-likelihood scoring; each cell is `acc / acc_norm` in %). **The evaluation harness is not
+included in this repository, so these numbers cannot be reproduced from it.** The prompt format, scoring rule, dataset
+URL and dataset sha256 of every benchmark are recorded in `results/benchmarks/`, so the protocol can be re-implemented.
 
 | Model | ARC-Easy | HellaSwag | PIQA | MathQA |
 |---|---:|---:|---:|---:|
@@ -177,10 +180,10 @@ MathQA acc_norm, SymA vs Base: +1.0 pp (p = 0.0323); MathQA acc_norm, FoX vs Bas
 0.091. A single seed cannot tell whether the MathQA differences are an architecture effect; they are
 small and close to the 20% chance level, so we do not interpret them.
 
-**ArithMark-3 is not used.** The raw scores are in the results file (32.1% to 36.5% for the four models), but
-the project owner found the benchmark non-diagnostic: they report that a trivial untrained baseline scores above the
-trained models on it. The file with that check is not part of this snapshot, so the claim is the owner's and is not
-backed by a result file here.
+**ArithMark-3 is not used.** The raw scores are in the results file (32.1% to 36.5% for the four models)
+but are not interpreted. The owner considers the benchmark non-diagnostic and reports that a trivial untrained baseline
+scores above the trained models on it. **That check is not backed by any result file in this repository yet, so it is an
+unverified statement and not part of the measured results.**
 
 ### Sampling and repetition (local check)
 
@@ -207,8 +210,9 @@ The direction is consistent with the idea that the ℓ bias rewards copying afte
 
 - One seed for every trained model; small scale (21,730,944 parameters in total, 9,442,944 non-embedding) and
   a 0.435B-token budget; the code data is Python only.
-- The SymA - Base gap at D/N = 20 (-0.0228) is only 1.9 times the planned one-seed noise level of
-  0.012, and the ℓ and forget-gate effects are only partly separated.
+- The SymA - Base gap at D/N = 20 (-0.0228) is only 1.9 times the assumed one-seed noise level of
+  0.012. That level is an assumption: the real noise has not been measured. The ℓ and forget-gate effects are only
+  partly separated.
 - Speed and memory are measured on short probes and on one GPU type (T4). SymA is slower and uses more memory than Base.
 - Resuming on CUDA is not bit-exact. Two identical uninterrupted runs differ by up to 0.084 in loss within
   25 steps, so the planned resume check with tolerance 0.01 could not be confirmed on CUDA (after a resume the
