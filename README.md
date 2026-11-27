@@ -2,10 +2,10 @@
 
 ![Palimpsa — a PyTorch testbed for attention mechanisms, illustrated with a causal attention grid](assets/palimpsa-banner.png)
 
-[Results](#measured-results-single-seed) · [Reproduce](#reproduce) · [Provenance](docs/PROVENANCE.md)
+[Research findings](docs/RESEARCH.md) · [Results](#measured-results-single-seed) · [Reproduce](#reproduce) · [Provenance](docs/PROVENANCE.md)
 
-**Public language model research.** Palimpsa publishes its implementation and aggregate experimental results
-so the work can be inspected and reproduced.
+**Open research project.** Palimpsa's source code, documented experimental methods, and aggregate results are
+publicly available for inspection. The repository includes instructions for running the published research code.
 
 Research code for **SymA**: softmax attention with no positional encoding (NoPE) whose logits get an
 exact-match-length (ℓ) bias and a FoX-style forget-gate bias. It is compared with a Llama-style baseline (RoPE,
@@ -14,6 +14,18 @@ SwiGLU, RMSNorm, QK-norm, grouped-query attention). "Palimpsa" is a working name
 **Status: research in progress.** Results snapshot of 2026-11-27. Stage S2 and a small paired dialogue fine-tuning pilot
 are complete at the 10M-class scale. The 30M and 100M stages have speed probes only. This repository contains research
 code and aggregate results.
+
+## Research at a glance
+
+- **Language modeling.** SymA had lower validation loss than Base across web, code, and math at the same token budget.
+  Downstream benchmark results favored different models by task.
+- **Context retrieval.** A3 led the exact-match binding test. Its advantage depended on the record and query sharing a
+  token suffix. Table swaps and activation interventions helped narrow down where this behavior affects the readout.
+- **Attempts to improve transfer.** Varying separators helped some held-out query forms. Two short mixed-data language
+  modeling pilots missed their predefined targets. The paired dialogue pilot improved some instruction and coding checks
+  while increasing language-modeling loss.
+
+The [research notes](docs/RESEARCH.md) cover the experiments, controls, negative results, and remaining questions.
 
 ## What SymA is
 
