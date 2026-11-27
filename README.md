@@ -1,13 +1,19 @@
 # Palimpsa
 
+![Palimpsa — a PyTorch testbed for attention mechanisms, illustrated with a causal attention grid](assets/palimpsa-banner.png)
+
+[Results](#measured-results-single-seed) · [Reproduce](#reproduce) · [Provenance](docs/PROVENANCE.md)
+
+**Public language model research.** Palimpsa publishes its implementation and aggregate experimental results
+so the work can be inspected and reproduced.
+
 Research code for **SymA**: softmax attention with no positional encoding (NoPE) whose logits get an
 exact-match-length (ℓ) bias and a FoX-style forget-gate bias. It is compared with a Llama-style baseline (RoPE,
 SwiGLU, RMSNorm, QK-norm, grouped-query attention). "Palimpsa" is a working name.
 
-**Status: research in progress.** Snapshot of 2026-11-22. Stage S2 (10M-class models) is still running: the SymA + RoPE
-ablation (A2) and the long runs for gate G2c are not finished. No 30M or 100M result exists yet. Model weights are not
-part of this repository; they will be published separately (for example on Hugging Face) once that is decided.
-License: **TBD by owner** (`LICENSE` is a placeholder, see the end of this file).
+**Status: research in progress.** Results snapshot of 2026-11-27. Stage S2 and a small paired dialogue fine-tuning pilot
+are complete at the 10M-class scale. The 30M and 100M stages have speed probes only. This repository contains research
+code and aggregate results.
 
 ## What SymA is
 
@@ -30,7 +36,7 @@ One code path (`palimpsa/model.py`) builds every variant:
 | `symA` | no | yes | yes | proposed model | yes |
 | `fox` | no | yes | no | A1: SymA without ℓ | yes |
 | `ell_rope` | yes | no | yes | A3: baseline plus ℓ | yes |
-| `symA_rope` | yes | yes | yes | A2: SymA plus RoPE | **not finished** (run in progress) |
+| `symA_rope` | yes | yes | yes | A2: SymA plus RoPE | yes, at 0.435B tokens |
 | `nope`, `ell_nope` | no | no | no / yes | tests and optional ablation | none |
 
 The code also contains two further candidates, a gated residual stream (`--residual gr`) and a sigmoid gate on the
@@ -139,22 +145,50 @@ Differences of validation loss (negative = better):
 Gate verdict from the script: `continue`. **Tentative reading (one seed):** most of the SymA-vs-Base difference
 appears to come from the ℓ bias (about -0.0175 without RoPE and -0.0184 with RoPE). The
 forget gate together with removing RoPE adds only -0.0054 and -0.0044 in the two
-settings, which is at the edge of the assumed (not measured) one-seed noise. These two effects are not separated yet:
-that needs A2 (SymA + RoPE), which is not finished.
+settings, which is at the edge of the assumed (not measured) one-seed noise. With the same 0.435B-token budget, A2
+(SymA + RoPE) reached **2.6967** macro NLL. Comparing A2 with SymA tests adding RoPE with both biases present.
+Comparing A2 with A3 tests adding the forget gate with RoPE and ℓ present.
+
+### G2c: language modeling at 1.30B tokens
+
+| Validation NLL, nats/token | Base | SymA | SymA − Base |
+|---|---:|---:|---:|
+| Web | 3.5166 | 3.5014 | -0.0152 |
+| Code | 1.8165 | 1.7897 | -0.0269 |
+| Math | 2.5035 | 2.4810 | -0.0225 |
+| Macro | 2.6122 | 2.5907 | -0.0215 |
+
+The macro gap retained about **94%** of its value at 0.435B tokens. The G2c script returned `continue`.
+The comparison uses the same token budget and one training seed. On the first 512 LAMBADA examples, Base scored
+**17.38%** and SymA scored **13.67%**. The held-out NLL and LAMBADA results favor different models.
+
+### Paired dialogue fine-tuning pilot
+
+The existing Base and SymA checkpoints each received the same 1,536 examples in the same order for 96 updates.
+The table reports correct outputs under the same greedy decoding settings and the same `User/Assistant` prompt format.
+
+| Checkpoint | English instruction exact match / 64 | GSM8K exact numeric / 80 | Restricted Python pass@1 / 64 |
+|---|---:|---:|---:|
+| Base before SFT | 0 | 0 | 0 |
+| SymA before SFT | 0 | 0 | 0 |
+| Base after SFT | 2 | 2 | 48 |
+| SymA after SFT | 18 | 0 | 45 |
+
+SymA SFT scored **25.00 percentage points** higher than Base SFT on the instruction subset, with a paired 95%
+interval of **[14.06, 35.94]** over prompts at one training seed. Both models scored **0/16** on the two held-out
+code families. On a separate matched subset of ordinary validation windows, macro NLL rose from **2.65645 to
+2.68894** for Base and from **2.63544 to 2.67238** for SymA. The pilot measures narrowly defined tasks with English
+prompts. Overlap with the pretraining data was not measured. See the
+[aggregate results](results/2026-11-27_aggregate.json) and [provenance](docs/PROVENANCE.md).
 
 ## What is NOT established yet
 
-- **G2c: does the advantage shrink with more data?** The three available points of the macro gap (SymA - Base) are
-  -0.0344 (0.1B-token sweep), -0.0279 (step 5,500 of the long runs, before the LR decay) and
-  -0.0228 (after decay at 0.435B). They come from different schedules, and the gap is shrinking along them. We do
-  not consider this settled in either direction. The runs to D/N = 60 that gate G2c needs have not been done.
+- **Quality at equal compute:** G2c matches training tokens. SymA uses more GPU time per token in the measured runs.
 - **S3 (30M models, three seeds, gate G3) and the 100M model:** not started. Only speed probes exist for these sizes.
-- **A2 (SymA + RoPE):** not finished. Until then the forget gate and the removal of RoPE cannot be told apart.
 - **Seed variance:** every training result above is one run. No confidence interval over seeds exists.
 - **Training-data overlap with the downstream benchmarks** was not checked (`training_data_overlap_checked: false` in the
   benchmark files).
-- BLiMP and LAMBADA evaluation code is included (`palimpsa/eval.py`); no BLiMP or LAMBADA result on the trained 10M
-  models is reported here.
+- **Breadth of generation quality:** the dialogue pilot uses short exact-match and restricted code checks.
 
 ## Benchmarks (user-measured; run by the owner, harness not included)
 
@@ -208,8 +242,8 @@ The direction is consistent with the idea that the ℓ bias rewards copying afte
 
 ## Limitations
 
-- One seed for every trained model; small scale (21,730,944 parameters in total, 9,442,944 non-embedding) and
-  a 0.435B-token budget; the code data is Python only.
+- One seed for every trained model. Base has 21,730,944 parameters in total and 9,442,944 non-embedding parameters.
+  The architecture ablations use 0.435B tokens. The paired Base and SymA runs end at 1.30B tokens. The code data is Python only.
 - The SymA - Base gap at D/N = 20 (-0.0228) is only 1.9 times the assumed one-seed noise level of
   0.012. That level is an assumption: the real noise has not been measured. The ℓ and forget-gate effects are only
   partly separated.
@@ -218,7 +252,7 @@ The direction is consistent with the idea that the ℓ bias rewards copying afte
   25 steps, so the planned resume check with tolerance 0.01 could not be confirmed on CUDA (after a resume the
   difference was 0.024). Resume equivalence is covered by the deterministic CPU test in
   `tests/test_t9_train.py`.
-- Generated text can repeat (see above); no quality evaluation of free-form generation exists.
+- Generated text can repeat (see above). The dialogue pilot uses greedy generation with fixed output limits.
 
 ## Data
 
@@ -245,7 +279,7 @@ Sources (public, not gated at the time of download; license metadata as listed o
 - Evaluation: [`nyu-mll/blimp`](https://huggingface.co/datasets/nyu-mll/blimp) (CC BY 4.0) and
   [`EleutherAI/lambada_openai`](https://huggingface.co/datasets/EleutherAI/lambada_openai) (MIT per its card).
 
-**The code license is stated at the dataset level only. We did not check licenses at the level of individual files, so
+**The code dataset's license is stated at the dataset level only. We did not check licenses at the level of individual files, so
 this repository does not distribute any data, tokens, `train.bin` or `val.bin` files.** `configs/raw_files.json` lists the
 exact files with sizes and sha256; `configs/hf_revisions_pin.json` pins the dataset revisions that were used.
 
@@ -297,8 +331,3 @@ tokenizer file is not included in the repository.
     results/     result files behind every number in this README (no paths, no private identifiers)
     configs/     dataset revisions and the sha256 list of the raw files
     docs/        PROVENANCE.md: number -> file table
-
-## License
-
-**License: TBD by owner.** `LICENSE` currently holds the unmodified Apache-2.0 text as a placeholder so that the file
-exists; it is not a decision. The final license and the copyright holder are for the owner to choose.

@@ -1,0 +1,202 @@
+{
+  "snapshot": "2026-11-27",
+  "pretraining_seed_count": 1,
+  "s2_435m_a2_nll": {
+    "web": 3.6193096196593535,
+    "code": 1.8871775895562324,
+    "math": 2.5835363163328293,
+    "macro": 2.6966745085161388
+  },
+  "s2_1300m": {
+    "base60": {
+      "web": 3.5165638036374887,
+      "code": 1.8165171135503986,
+      "math": 2.5034886642578247,
+      "macro": 2.612189860481904
+    },
+    "symA60": {
+      "web": 3.501405219152525,
+      "code": 1.789651426386965,
+      "math": 2.4810337381117757,
+      "macro": 2.590696794550422
+    },
+    "delta60": {
+      "macro": -0.021493065931482036,
+      "web": -0.015158584484963544,
+      "code": -0.026865687163433627,
+      "math": -0.022454926146048937
+    },
+    "r10": 0.9417696468413409,
+    "verdict": "continue"
+  },
+  "lambada_subset": {
+    "items": 512,
+    "selection": "first 512",
+    "accuracy": {
+      "B_1300": 0.173828125,
+      "S_1300": 0.13671875
+    }
+  },
+  "dialogue_sft": {
+    "train_counts": {
+      "math": 512,
+      "instruction": 512,
+      "code": 512
+    },
+    "updates": 96,
+    "assistant_and_eos_targets": 80903,
+    "validation_windows_per_domain": 256,
+    "models": {
+      "base_native": {
+        "generation": {
+          "instruction": {
+            "n": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "math": {
+            "n": 80,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "code": {
+            "n": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "generation_macro": 0.0,
+        "validation_nll": {
+          "web": 3.5283273738852117,
+          "code": 1.78233587796449,
+          "math": 2.6586749965707743,
+          "macro": 2.6564460828068253
+        },
+        "held_out_code_families": {
+          "n": 16,
+          "correct": 0
+        }
+      },
+      "base_sft": {
+        "generation": {
+          "instruction": {
+            "n": 64,
+            "correct": 2,
+            "accuracy": 0.03125
+          },
+          "math": {
+            "n": 80,
+            "correct": 2,
+            "accuracy": 0.025
+          },
+          "code": {
+            "n": 64,
+            "correct": 48,
+            "accuracy": 0.75
+          }
+        },
+        "generation_macro": 0.26875,
+        "validation_nll": {
+          "web": 3.553884438466821,
+          "code": 1.8067838265485177,
+          "math": 2.7061490506985932,
+          "macro": 2.6889391052379774
+        },
+        "held_out_code_families": {
+          "n": 16,
+          "correct": 0
+        }
+      },
+      "syma_native": {
+        "generation": {
+          "instruction": {
+            "n": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "math": {
+            "n": 80,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "code": {
+            "n": 64,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "generation_macro": 0.0,
+        "validation_nll": {
+          "web": 3.5132513651116213,
+          "code": 1.7559332261970892,
+          "math": 2.637121960019997,
+          "macro": 2.635435517109569
+        },
+        "held_out_code_families": {
+          "n": 16,
+          "correct": 0
+        }
+      },
+      "syma_sft": {
+        "generation": {
+          "instruction": {
+            "n": 64,
+            "correct": 18,
+            "accuracy": 0.28125
+          },
+          "math": {
+            "n": 80,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "code": {
+            "n": 64,
+            "correct": 45,
+            "accuracy": 0.703125
+          }
+        },
+        "generation_macro": 0.328125,
+        "validation_nll": {
+          "web": 3.5432431880375477,
+          "code": 1.7839141512625996,
+          "math": 2.6899831323087517,
+          "macro": 2.672380157202966
+        },
+        "held_out_code_families": {
+          "n": 16,
+          "correct": 0
+        }
+      }
+    },
+    "paired_syma_sft_minus_base_sft": {
+      "instruction": {
+        "pp": 25.0,
+        "ci95_pp": [
+          14.0625,
+          35.9375
+        ]
+      },
+      "math": {
+        "pp": -2.5,
+        "ci95_pp": [
+          -6.25,
+          0.0
+        ]
+      },
+      "code": {
+        "pp": -4.6875,
+        "ci95_pp": [
+          -10.9375,
+          0.0
+        ]
+      },
+      "macro": {
+        "pp": 5.9375,
+        "ci95_pp": [
+          1.6666666666666667,
+          10.104166666666666
+        ]
+      }
+    }
+  }
+}

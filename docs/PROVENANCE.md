@@ -2,6 +2,23 @@
 
 Each row: the value as printed, how it was computed (blank = copied as is, rounded), and where it comes from in `results/` (JSON pointer after `#`).
 
+## 2026-11-27 results update
+
+The [aggregate JSON](../results/2026-11-27_aggregate.json) contains selected numerical fields from the S2 training
+summaries and the local evaluations. NLL is in nats per token. Accuracies stored as fractions are multiplied by 100 in
+the README.
+
+| README section | Fields in the aggregate JSON | Origin and calculation |
+|---|---|---|
+| A2 at 0.435B | `s2_435m_a2_nll` | Final validation of the S2-3b A2 run |
+| G2c at 1.30B | `s2_1300m.base60`, `symA60`, `delta60`, `r10`, `verdict` | S2-4 gate output. Delta is SymA minus Base. Retention is the final macro gap divided by the earlier macro gap. |
+| LAMBADA subset | `lambada_subset` | Local FP32 exact last-word scores on the first 512 examples |
+| Dialogue SFT | `dialogue_sft.train_counts`, `updates`, `models`, `paired_syma_sft_minus_base_sft.instruction` | Both checkpoints used the same training examples, order, and assistant-token objective. Results are counts on fixed held-out prompts. The confidence interval is paired over prompts at one training seed. |
+
+The dialogue evaluation uses local English instruction checks, GSM8K official-test questions, and a restricted
+integer-expression subset of Python. The two held-out code families account for 16 examples. Its NLL uses 256
+fixed windows per domain in the matched local evaluation. It uses a different validation subset from S2-4.
+
 | README section | key | value | calculation | source |
 |---|---|---|---|---|
 | G0 speed | g0.100m.base | 12,702 |  | `results/g0_speed_smoke.json#probe_100M_micro4/base/tok_s_steady_median` |
